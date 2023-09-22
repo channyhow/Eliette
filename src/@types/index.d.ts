@@ -1,0 +1,18 @@
+export interface Education {
+  startYear: number;
+  endYear: number;
+  school: string;
+  degree: string;
+  location: string;
+  skills: string[];
+}
+
+export interface Experience {
+  startYear: number;
+  endYear: number;
+  company: string;
+  position: string;
+  location: string;
+  description : string;
+  skills: string[];
+}

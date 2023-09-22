@@ -1,0 +1,96 @@
+@use "./../../styles/vars";
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .experience-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  &__title {
+    text-align: right;
+    padding-bottom: 1em;
+  }
+
+  &__link {
+    font-family: vars.$ftitle;
+    position: sticky;
+    bottom: 0;
+
+    &--hovered {
+      transition: transform 0.3s ease-in-out;
+      transform: translateX(-20px); /* Adjust the amount of slide as needed */
+    }
+  }
+
+  &__arrow {
+    font-size: 1em;
+    align-items: baseline;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    /* Add a color for the arrow icon */
+    color: #030303;
+
+    &--visible {
+      opacity: 1;
+      color: #da231b;
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+  
+}
+
+}
+
+// /* Extra small devices (phones, 600px and down) */
+// @media only screen and (max-width: 600px) {
+// }
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 767px) {
+  .experience-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+  
+    &__title {
+      padding: 1.5em 0em 1em 0em;
+      font-size: 1.5em;
+    }
+  
+    &__link {
+      font-family: vars.$ftitle;
+      position: static;
+      bottom: 0;
+  
+      &--hovered {
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(-20px); /* Adjust the amount of slide as needed */
+      }
+    }
+  
+    &__arrow {
+      font-size: 1em;
+      align-items: baseline;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      /* Add a color for the arrow icon */
+      color: #030303;
+  
+      &--visible {
+        opacity: 1;
+        color: #da231b;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    
+  }
+
+}
+
+// /* Large devices (laptops/desktops, 992px and up) */
+// @media only screen and (min-width: 992px) {
+// }
+// /* Extra large devices (large laptops and desktops, 1200px and up) */
+// @media only screen and (min-width: 1200px) {
+// }

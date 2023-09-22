@@ -1,0 +1,120 @@
+@use "./../../styles/vars";
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .projects {
+  ol {
+    padding-top: 2em;
+    margin: 0;
+  }
+
+  &__title {
+    text-align: right;
+    padding-bottom: 1em;
+  }
+
+  &__link {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+    transition: transform 0.3s ease-in-out;
+
+    &-text {
+      font-size: 1.5em;
+      vertical-align: middle;
+      color: #030303;
+      padding-bottom: 1em;
+      font-family: vars.$ftitle;
+
+      &--hovered {
+        transform: translateX(-20px); /* Adjust the amount of slide as needed */
+        font-family: vars.$fheader;
+        font-size: 210%;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+  }
+
+  &__arrow {
+    font-size: 1em;
+    vertical-align: middle;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    /* Add a color for the arrow icon */
+    color: #030303;
+
+    &--visible {
+      opacity: 1;
+      color: #da231b;
+    }
+  }
+}
+}
+
+// /* Extra small devices (phones, 600px and down) */
+// @media only screen and (max-width: 600px) {
+// }
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 767px) {
+  .projects {
+    // display: flex;
+    // flex-direction: column;
+    padding: 0.5em;
+    // ol {
+    //   padding-top: 2em;
+    //   margin: 0;
+    // }
+  text-align: center;   
+    &__title {
+       padding: 1.5em 0em 1em 0em;
+      font-size: 1.5em;
+    }
+  
+    &__link {
+      display: flex;
+      // align-items: baseline;
+      justify-content: center;
+      transition: transform 0.3s ease-in-out;
+      padding: 1em 0em 0.5em 0em;
+      flex: 1;
+      text-align: center;   
+
+
+  
+      &-text {
+        font-size: 1.2em;
+     color: #030303;
+        padding-bottom: 0.3em;
+        font-family: vars.$ftitle;
+  
+        &--hovered {
+          transform: translateX(-20px); /* Adjust the amount of slide as needed */
+          font-family: vars.$fheader;
+          font-size: 210%;
+          transition: transform 0.3s ease-in-out;
+        }
+      }
+    }
+  
+    &__arrow {
+      font-size: 1em;
+      vertical-align: middle;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      /* Add a color for the arrow icon */
+      color: #030303;
+  
+      &--visible {
+        opacity: 1;
+        color: #da231b;
+      }
+    }
+  }
+  }
+
+// /* Large devices (laptops/desktops, 992px and up) */
+// @media only screen and (min-width: 992px) {
+// }
+// /* Extra large devices (large laptops and desktops, 1200px and up) */
+// @media only screen and (min-width: 1200px) {
+// }

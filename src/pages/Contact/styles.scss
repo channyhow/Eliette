@@ -1,0 +1,49 @@
+@use "./../../styles/vars";
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .contact {
+    display: flex;
+    text-align: right;
+    justify-content: right;
+    flex: 1; /* This allows the homepage to grow and take up remaining space */
+    flex-direction: column;
+
+    &__title {
+      padding-bottom: 1em;
+    }
+
+    &__form {
+      display: flex;
+      justify-content: right;    }
+  }
+}
+
+// /* Extra small devices (phones, 600px and down) */
+// @media only screen and (max-width: 600px) {
+
+// }
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 767px) {
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5em 0em 1em 0em;
+    flex: 1; /* This allows the homepage to grow and take up remaining space */
+    // padding: 1em;
+    &__title {
+      padding: 1.5em 0em 1em 0em;
+      font-size: 1.5em;
+    }
+  }
+}
+
+// /* Large devices (laptops/desktops, 992px and up) */
+// @media only screen and (min-width: 992px) {
+
+// }
+// /* Extra large devices (large laptops and desktops, 1200px and up) */
+// @media only screen and (min-width: 1200px) {
+
+// }

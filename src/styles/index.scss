@@ -1,0 +1,56 @@
+@use "reset";
+@use "vars";
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3em; /* 40px/16=2.5em */
+  font-family: vars.$fheader;
+}
+
+h2 {
+  font-size: 2em; /* 30px/16=1.875em */
+  font-family: vars.$ftitle;
+  line-height: 1.5em;
+}
+
+h3 {
+  font-size: 1.5em; /* 30px/16=1.875em */
+  font-family: vars.$ftitle;
+}
+
+h4 {
+  font-size: 1em; /* 30px/16=1.875em */
+  font-family: vars.$fbody;
+}
+
+p {
+  font-size: 0.875em; /* 14px/16=0.875em */
+  font-family: vars.$fbody;
+  line-height: 1.5em;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: vars.$background;
+
+}
+
+html {
+  height: 100%;
+}

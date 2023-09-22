@@ -1,0 +1,44 @@
+//colors
+// $primary: #1D3E8F;
+// $primary: #7383ab;
+$primary: #030303;
+// $secondary: #efc086;
+$secondary: #da231b;
+
+$tertiary: #FDB727;
+// $background: #080E4A;
+$background: #E6E6E6;
+$success: #55ff55;
+$danger: #ff5555;
+
+//fonts
+$fbody: 'Inter', sans-serif;
+$fheader: 'Anton', sans-serif;
+$ftitle:'Inclusive Sans', sans-serif;
+$fnav: 'Work Sans', sans-serif;
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  //sizes
+  $font-btn: 0.5em;
+  $font-body: 1em;
+  $font-subtitle: 1.5em;
+  $font-header: 2em;
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  $font-btn: 0.5em;
+  $font-body: 1.5em;
+  $font-subtitle: 2em;
+  $font-header: 3em;
+}

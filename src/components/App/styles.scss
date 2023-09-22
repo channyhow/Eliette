@@ -1,0 +1,93 @@
+@use "./../../styles/vars";
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .app {
+    display: flex;
+    height: 100vh; /* Ensure the app takes at least the full viewport height */
+    // flex: 1;
+    overflow: hidden; // Hide overflow for the entire app
+    background-color: vars.$background;
+
+    &__border {
+      display: flex;
+      // border: 1px solid vars.$primary;
+      flex: 1;
+      justify-content: space-between;
+      padding: 3em;
+      }
+
+     &__components {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow-y: auto; // Add vertical scroll if necessary
+      height: 100%; /* Set the height to 100% of the viewport height */
+      min-width: 30%;
+      &::-webkit-scrollbar {
+        display: none;
+    }
+    } 
+
+    &__route {
+      // display: flex;
+      overflow-y: scroll; // Add vertical scroll if necessary
+      height: 100%;
+      max-width: 70%;
+      padding: 1em; /* Add padding to create space inside the container */
+      // box-sizing: border-box; /* Include padding in the element's total width */
+      // flex-grow: 1; /* Allow this section to grow and take available space */
+    &::-webkit-scrollbar {
+      display: none;
+  }
+    }
+  }
+}
+// // /* Large devices (laptops/desktops, 992px and up) */
+// // @media only screen and (min-width: 992px) {
+// // }
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 767px) {
+  .app {
+    display: flex;
+    // height: 100vh; /* Ensure the app takes at least the full viewport height */
+    overflow: hidden; // Hide overflow for the entire app
+    flex-direction: column;
+    justify-content: center;
+
+    &__border {
+    padding: 2em 1.5em 8em 1.5em;
+    // margin: 2em 0.5em 4em 0.5em;
+      }
+
+     &__components {
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: space-between;
+      overflow-y: auto; // Add vertical scroll if necessary
+      height: 100%; /* Set the height to 100% of the viewport height */
+      min-width: 30%;
+      &::-webkit-scrollbar {
+        display: none;
+    }
+    } 
+
+  //   &__route {
+  //     // overflow-y: scroll; // Add vertical scroll if necessary
+  //     // height: 100%;
+  //     // max-width: 50%;
+  // }
+    }
+    
+  }
+
+
+
+
+// /* Extra large devices (large laptops and desktops, 1200px and up) */
+// @media only screen and (min-width: 1200px) {
+// }
