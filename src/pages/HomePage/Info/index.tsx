@@ -1,4 +1,6 @@
-import InfoNav from '../Info Nav';
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable max-len */
+import InfoNav from '../../../components/Info Nav';
 import './styles.scss';
 
 function Info() {

@@ -1,8 +1,8 @@
-@use "./../../styles/vars";
+@use "./../../../styles/vars";
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  .experience-card {
+  .education-card {
     // background-color: #f0f0f0;
     padding: 1.5em;
     margin-bottom: 1.5em;
@@ -26,16 +26,7 @@
     }
 
     li {
-      border-radius: 0.5em;
-      background-color: vars.$secondary;
-      color: vars.$background;
-      margin: 0.3em;
-      padding: 0.7em 0.9em;
-      text-align: center;
-      width: fit-content;
-      font-size: 60%;
-      font-weight: bold;
-      // box-shadow: 0 2px 4px rgba(38, 37, 37, 0.1);
+      padding: 0.3em;
     }
 
     &__duration {
@@ -56,22 +47,22 @@
     &__details {
       margin-left: 2em;
     }
-    &__company {
+    &__school {
       font-weight: 500;
     }
 
-    &__position {
+    &__degree {
       margin-bottom: 0.5em;
       font-weight: bold;
     }
 
     &__location {
-      // margin-top: 0.5em;
       font-size: 80%;
       margin-bottom: 0.5em;
     }
 
     &__skills {
+      // margin-top: 10px;
       display: flex;
     }
   }
@@ -80,10 +71,9 @@
 // /* Extra small devices (phones, 600px and down) */
 // @media only screen and (max-width: 600px) {
 // }
-
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 767px) {
-  .experience-card {
+  .education-card {
     padding: 0.5em 0.5em;
     margin-bottom: 1.5em;
     font-family: vars.$fbody;
@@ -102,21 +92,17 @@
     }
 
     li {
-      border-radius: 0.5em;
-      background-color: vars.$secondary;
-      color: vars.$background;
-      margin: 0.3em;
-      padding: 0.7em 0.9em;
+      // border-radius: 0.5em;
+      // color: vars.$background;
+      // margin: 0.3em;
+      padding: 0.5em 0.3em;
       text-align: center;
-      width: fit-content;
-      font-size: 60%;
+      // width: fit-content;
+      transform: scale(90%);
       font-weight: bold;
       // box-shadow: 0 2px 4px rgba(38, 37, 37, 0.1);
     }
 
-    &__header {
-      display: flex;
-    }
     &__duration {
       margin-bottom: 0.5em;
       display: flex;
@@ -130,15 +116,16 @@
       font-size: 90%;
     }
 
-    &__description {
+    &__details {
       font-size: 90%;
     }
-    &__company {
+
+    &__school {
       font-size: 80%;
       font-weight: 500;
     }
 
-    &__position {
+    &__degree {
       margin-bottom: 0.5em;
       font-weight: 600;
     }

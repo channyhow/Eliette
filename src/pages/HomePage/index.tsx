@@ -1,4 +1,4 @@
-import Info from '../../components/Info';
+import Info from './Info';
 import './styles.scss';
 
 function HomePage() {

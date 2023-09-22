@@ -1,18 +1,18 @@
 import React from 'react';
 import './styles.scss';
-import { Education } from '../../@types';
-import CSSIcon from '../Icons/CSS';
-import HtmlIcon from '../Icons/HTML';
-import IllustratorIcon from '../Icons/Illustrator';
-import JavaScriptIcon from '../Icons/JavaScript';
-import NodeJsIcon from '../Icons/Node.Js';
-import PhotoshopIcon from '../Icons/Photoshop';
-import PostgreSQLIcon from '../Icons/PostgreSQL';
-import ReactIcon from '../Icons/React';
-import ReduxIcon from '../Icons/Redux';
-import ShopifyIcon from '../Icons/Shopify';
-import TypescriptIcon from '../Icons/TS';
-import ExpressIcon from '../Icons/Express';
+import { Education } from '../../../@types';
+import CSSIcon from '../../../components/Icons/CSS';
+import HtmlIcon from '../../../components/Icons/HTML';
+import IllustratorIcon from '../../../components/Icons/Illustrator';
+import JavaScriptIcon from '../../../components/Icons/JavaScript';
+import NodeJsIcon from '../../../components/Icons/Node.Js';
+import PhotoshopIcon from '../../../components/Icons/Photoshop';
+import PostgreSQLIcon from '../../../components/Icons/PostgreSQL';
+import ReactIcon from '../../../components/Icons/React';
+import ReduxIcon from '../../../components/Icons/Redux';
+import ShopifyIcon from '../../../components/Icons/Shopify';
+import TypescriptIcon from '../../../components/Icons/TS';
+import ExpressIcon from '../../../components/Icons/Express';
 
 interface EducationCardProps {
   education: Education;
