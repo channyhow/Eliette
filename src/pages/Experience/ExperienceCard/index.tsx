@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles.scss';
-import { Experience } from '../../@types';
+import { Experience } from '../../../@types';
 
 interface ExperienceCardProps {
   experience: Experience;
