@@ -4,14 +4,14 @@ import './styles.scss';
 
 function IntroPage() {
   const navigate = useNavigate();
-  // appearing
-  const [fadeIn, setFadeIn] = useState(false);
+  // // appearing
+  // const [fadeIn, setFadeIn] = useState(false);
   // disappearing
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setFadeIn(true);
+      // setFadeIn(true);
       // Redirect to the homepage after the fade-out animation
       setTimeout(() => {
         navigate('/home');

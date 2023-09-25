@@ -15,4 +15,5 @@ export interface Experience {
   location: string;
   description : string;
   skills: string[];
+  id:string
 }

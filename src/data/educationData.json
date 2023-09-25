@@ -1,5 +1,21 @@
 [
   {
+    "startYear": "2022",
+    "endYear": "2023",
+    "school": "Ecole O'Clock",
+    "degree": "Full stack Javascript developer training",
+    "location": "Paris, IDF, France",
+    "skills": [
+      "Javascript",
+      "Typescript",
+      "Express",
+      "CSS3",
+      "React",
+      "Node.JS",
+      "PostgreSQL"
+    ]
+  },
+  {
     "startYear": "2009",
     "endYear": "2011",
     "school": "Beijing Language and Culture University",
@@ -7,14 +23,7 @@
     "location": "Beijing, China",
     "skills": []
   },
-  {
-    "startYear": "2022",
-    "endYear": "2023",
-    "school": "Ecole O'Clock",
-    "degree": "Full stack Javascript developer training",
-    "location": "Paris, IDF, France",
-    "skills": ["Javascript", "Typescript", "Express","CSS3", "React", "Node.JS", "PostgreSQL"]
-  },
+
   {
     "startYear": "2005",
     "endYear": "2008",

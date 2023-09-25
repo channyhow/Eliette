@@ -12,7 +12,7 @@ import Contact from '../../pages/Contact';
 import Experience from '../../pages/Experience';
 import BottomSocial from '../Bottom social bar';
 import Error from '../../pages/404';
-import Maintenance from '../../pages/maintenance';
+import Maintenance from '../../pages/Maintenance';
 
 function App() {
   // Define a media query for desktop screens

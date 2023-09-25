@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import './styles.scss';
-import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import ReduxIcon from '../Icons/Redux';
 import JavaScriptIcon from '../Icons/JavaScript';
 import ReactIcon from '../Icons/React';

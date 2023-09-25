@@ -1,5 +1,5 @@
 {
-  "name": "react-modele-vite",
+  "name": "monsteralover",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -41,5 +41,6 @@
   },
   "main": "index.js",
   "author": "channyh",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": "https://github.com/channyhow/Eliette.git"
 }
