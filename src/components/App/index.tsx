@@ -3,16 +3,16 @@ import {
   BrowserRouter, Route, Routes,
 } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
-import IntroPage from '../pages/IntroPage';
-import HomePage from '../pages/HomePage';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import Contact from '../pages/Contact';
+import IntroPage from '../../pages/IntroPage';
+import HomePage from '../../pages/HomePage';
+import Header from '../Header';
+import Footer from '../Footer';
+import Contact from '../../pages/Contact';
 // import Projects from '../../pages/Projects';
-import Experience from '../pages/Experience';
-import BottomSocial from '../components/Bottom social bar';
-import Error from '../pages/404';
-import Maintenance from '../pages/Maintenance';
+import Experience from '../../pages/Experience';
+import BottomSocial from '../Bottom social bar';
+import Error from '../../pages/404';
+import Maintenance from '../../pages/Maintenance';
 
 function App() {
   // Define a media query for desktop screens

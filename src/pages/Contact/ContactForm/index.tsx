@@ -3,6 +3,7 @@ import {
 } from '@mui/material';
 import { useState } from 'react';
 import './styles.scss';
+import axios from 'axios';
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -10,6 +11,10 @@ function ContactForm() {
     email: '',
     message: '',
   });
+
+  const [submitting, setSubmitting] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -19,24 +24,36 @@ function ContactForm() {
     }));
   };
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-    // Handle form submission here, e.g., send the data to a server or perform any desired action.
-    // eslint-disable-next-line no-console
-    console.log(formData);
+
+    try {
+      setSubmitting(true);
+      setError('');
+      const response = await axios.post('http://localhost:3000/send-email', formData);
+      console.log(response.data); // Handle the response as needed
+      setSuccess(true);
+      setFormData({
+        name: '',
+        email: '',
+        message: '',
+      });
+    } catch (error) {
+      console.error(error);
+      setError('Error sending message. Please try again later.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
     <form onSubmit={handleSubmit} className="contact-form">
       <Grid container spacing={2}>
         <Grid item xs={12}>
-
           <Typography fontSize={12} gutterBottom fontFamily="Inter">
             I&apos;d love to hear from you, so don&apos;t hesitate to drop me a line!
             <br />
             En français ou en anglais, 用汉字给我写邮电也行!
-            {' '}
-
           </Typography>
         </Grid>
         <Grid item xs={12}>
@@ -48,12 +65,6 @@ function ContactForm() {
             onChange={handleChange}
             value={formData.name}
             required
-            sx={{
-              '& .MuiInputLabel-root': { color: '030303' },
-              '&:hover .MuiInputLabel-root': { color: '#DA231B' },
-              '& .MuiOutlinedInput-notchedOutline': { borderColor: '030303' },
-              '&:hover .MuiOutlinedInput-notchedOutline': { borderColor: '#DA231B' },
-            }}
           />
         </Grid>
         <Grid item xs={12}>
@@ -66,12 +77,6 @@ function ContactForm() {
             onChange={handleChange}
             value={formData.email}
             required
-            sx={{
-              '& .MuiInputLabel-root': { color: '030303' },
-              '&:hover .MuiInputLabel-root': { color: '#DA231B' },
-              '& .MuiOutlinedInput-notchedOutline': { borderColor: '030303' },
-              '&:hover .MuiOutlinedInput-notchedOutline': { borderColor: '#DA231B' },
-            }}
           />
         </Grid>
         <Grid item xs={12}>
@@ -85,15 +90,6 @@ function ContactForm() {
             onChange={handleChange}
             value={formData.message}
             required
-            sx={{
-              '& .MuiInputLabel-root': { color: '030303' },
-              '&:hover .MuiInputLabel-root': { color: '#DA231B' },
-              '&:active .MuiInputLabel-root': { color: '#DA231B' },
-
-              '& .MuiOutlinedInput-notchedOutline': { borderColor: '030303' },
-              '&:hover .MuiOutlinedInput-notchedOutline': { borderColor: '#DA231B' },
-              '&:active .MuiOutlinedInput-notchedOutline': { borderColor: '#DA231B' },
-            }}
           />
         </Grid>
         <Grid item xs={12}>
@@ -109,10 +105,21 @@ function ContactForm() {
                 fontFamily: 'Inter',
               },
             }}
+            disabled={submitting}
           >
-            Submit
+            {submitting ? 'Submitting...' : 'Submit'}
           </Button>
         </Grid>
+        {success && (
+          <Grid item xs={12}>
+            <Typography variant="success">Message sent successfully!</Typography>
+          </Grid>
+        )}
+        {error && (
+          <Grid item xs={12}>
+            <Typography variant="error">{error}</Typography>
+          </Grid>
+        )}
       </Grid>
     </form>
   );
