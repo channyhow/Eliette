@@ -1,124 +1,68 @@
+import React from 'react';
 import {
-  Grid, Typography, TextField, Button,
+  TextField,
+  Button,
 } from '@mui/material';
-import { useState } from 'react';
-import './styles.scss';
-import axios from 'axios';
+import emailjs from 'emailjs-com';
+import Swal from 'sweetalert2';
 
-function ContactForm() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
+interface ContactFormProps {
+  // Define any props your component might receive here
+  'SERVICE_ID': string,
+  'TEMPLATE_ID': string,
+  'USER_ID': string
+}
 
-  const [submitting, setSubmitting] = useState(false);
-  const [success, setSuccess] = useState(false);
-  const [error, setError] = useState('');
+function ContactForm(props: ContactFormProps) {
+  const { SERVICE_ID, TEMPLATE_ID, USER_ID } = props; // Define these variables
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = event.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = async (event: React.FormEvent) => {
-    event.preventDefault();
-
-    try {
-      setSubmitting(true);
-      setError('');
-      const response = await axios.post('http://localhost:3000/send-email', formData);
-      console.log(response.data); // Handle the response as needed
-      setSuccess(true);
-      setFormData({
-        name: '',
-        email: '',
-        message: '',
+  const handleOnSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target as HTMLFormElement, USER_ID)
+      .then((result) => {
+        console.log(result.text);
+        Swal.fire({
+          icon: 'success',
+          title: 'Message Sent Successfully',
+        });
+      }, (error) => {
+        console.log(error.text);
+        Swal.fire({
+          icon: 'error',
+          title: 'Ooops, something went wrong',
+          text: error.text,
+        });
       });
-    } catch (error) {
-      console.error(error);
-      setError('Error sending message. Please try again later.');
-    } finally {
-      setSubmitting(false);
-    }
+    (e.target as HTMLFormElement).reset();
   };
 
   return (
-    <form onSubmit={handleSubmit} className="contact-form">
-      <Grid container spacing={2}>
-        <Grid item xs={12}>
-          <Typography fontSize={12} gutterBottom fontFamily="Inter">
-            I&apos;d love to hear from you, so don&apos;t hesitate to drop me a line!
-            <br />
-            En français ou en anglais, 用汉字给我写邮电也行!
-          </Typography>
-        </Grid>
-        <Grid item xs={12}>
-          <TextField
-            fullWidth
-            label="Name"
-            name="name"
-            variant="outlined"
-            onChange={handleChange}
-            value={formData.name}
-            required
-          />
-        </Grid>
-        <Grid item xs={12}>
-          <TextField
-            fullWidth
-            label="Email"
-            name="email"
-            type="email"
-            variant="outlined"
-            onChange={handleChange}
-            value={formData.email}
-            required
-          />
-        </Grid>
-        <Grid item xs={12}>
-          <TextField
-            fullWidth
-            label="Message"
-            name="message"
-            multiline
-            rows={4}
-            variant="outlined"
-            onChange={handleChange}
-            value={formData.message}
-            required
-          />
-        </Grid>
-        <Grid item xs={12}>
-          <Button
-            type="submit"
-            variant="contained"
-            sx={{
-              backgroundColor: '#030303',
-              color: '#fff',
-              '&:hover': {
-                backgroundColor: '#DA231B',
-                fontSize: 15,
-                fontFamily: 'Inter',
-              },
-            }}
-            disabled={submitting}
-          >
-            {submitting ? 'Submitting...' : 'Submit'}
-          </Button>
-        </Grid>
-        <Grid item xs={12}>
-          {success && (
-          <Typography style={{ color: 'green' }}>Message sent successfully!</Typography>
-          )}
-          {error && (
-          <Typography style={{ color: 'red' }}>{error}</Typography>
-          )}
-        </Grid>
-      </Grid>
+    <form onSubmit={handleOnSubmit}>
+      <TextField
+        id="form-input-control-email"
+        label="Email"
+        name="user_email"
+        placeholder="Email…"
+        required
+        // You may need to add more props here
+      />
+      <TextField
+        id="form-input-control-last-name"
+        label="Name"
+        name="user_name"
+        placeholder="Name…"
+        required
+        // You may need to add more props here
+      />
+      <TextField
+        id="form-textarea-control-opinion"
+        label="Message"
+        name="user_message"
+        placeholder="Message…"
+        required
+        // You may need to add more props here
+      />
+      <Button type="submit" color="primary">Submit</Button>
     </form>
   );
 }
