@@ -110,16 +110,14 @@ function ContactForm() {
             {submitting ? 'Submitting...' : 'Submit'}
           </Button>
         </Grid>
-        {success && (
-          <Grid item xs={12}>
-            <Typography variant="success">Message sent successfully!</Typography>
-          </Grid>
-        )}
-        {error && (
-          <Grid item xs={12}>
-            <Typography variant="error">{error}</Typography>
-          </Grid>
-        )}
+        <Grid item xs={12}>
+          {success && (
+          <Typography style={{ color: 'green' }}>Message sent successfully!</Typography>
+          )}
+          {error && (
+          <Typography style={{ color: 'red' }}>{error}</Typography>
+          )}
+        </Grid>
       </Grid>
     </form>
   );
