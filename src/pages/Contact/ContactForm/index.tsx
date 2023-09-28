@@ -1,69 +1,108 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import {
   TextField,
   Button,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogContentText,
+  DialogActions,
 } from '@mui/material';
 import emailjs from 'emailjs-com';
-import Swal from 'sweetalert2';
 
-interface ContactFormProps {
-  // Define any props your component might receive here
-  'SERVICE_ID': string,
-  'TEMPLATE_ID': string,
-  'USER_ID': string
-}
+function ContactForm() {
+  const form = useRef<HTMLFormElement | null>(null);
+  const [isSuccess, setIsSuccess] = useState<boolean>(false);
+  const [isErrorDialogOpen, setIsErrorDialogOpen] = useState<boolean>(false);
 
-function ContactForm(props: ContactFormProps) {
-  const { SERVICE_ID, TEMPLATE_ID, USER_ID } = props; // Define these variables
-
-  const handleOnSubmit = (e: React.FormEvent) => {
+  const sendEmail = async (e: React.FormEvent) => {
     e.preventDefault();
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target as HTMLFormElement, USER_ID)
-      .then((result) => {
-        console.log(result.text);
-        Swal.fire({
-          icon: 'success',
-          title: 'Message Sent Successfully',
-        });
-      }, (error) => {
-        console.log(error.text);
-        Swal.fire({
-          icon: 'error',
-          title: 'Ooops, something went wrong',
-          text: error.text,
-        });
-      });
-    (e.target as HTMLFormElement).reset();
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const userEmail = form.current?.user_email?.value;
+
+    if (!userEmail || !emailRegex.test(userEmail)) {
+      // Display the error dialog
+      setIsErrorDialogOpen(true);
+      return;
+    }
+
+    try {
+      if (form.current) {
+        await emailjs.sendForm('service_hgkesjn', 'template_xsgu35l', form.current, 'O8_eni2QDzWuo6roS');
+        setIsSuccess(true); // Show success message
+        form.current.reset(); // Reset the form
+      }
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.error('Email sending failed:', error);
+      // Display the error dialog
+      setIsErrorDialogOpen(true);
+    }
+  };
+
+  const handleCloseErrorDialog = () => {
+    setIsErrorDialogOpen(false);
   };
 
   return (
-    <form onSubmit={handleOnSubmit}>
-      <TextField
-        id="form-input-control-email"
-        label="Email"
-        name="user_email"
-        placeholder="Email…"
-        required
-        // You may need to add more props here
-      />
-      <TextField
-        id="form-input-control-last-name"
-        label="Name"
-        name="user_name"
-        placeholder="Name…"
-        required
-        // You may need to add more props here
-      />
-      <TextField
-        id="form-textarea-control-opinion"
-        label="Message"
-        name="user_message"
-        placeholder="Message…"
-        required
-        // You may need to add more props here
-      />
-      <Button type="submit" color="primary">Submit</Button>
-    </form>
+    <div>
+      {isSuccess && (
+        <div style={{ color: 'green', marginBottom: '10px' }}>
+          Message Sent Successfully
+        </div>
+      )}
+
+      <form ref={form} onSubmit={sendEmail} style={{ display: 'flex', flexDirection: 'column', width: '30em' }}>
+        <TextField
+          id="form-input-control-email"
+          label="Email"
+          name="user_email"
+          placeholder="Email…"
+          required
+          style={{ marginBottom: '1em' }}
+        />
+        <TextField
+          id="form-input-control-last-name"
+          label="Name"
+          name="user_name"
+          placeholder="Name…"
+          required
+          style={{ marginBottom: '1em' }}
+
+        />
+        <TextField
+          id="form-textarea-control-opinion"
+          label="Message"
+          name="user_message"
+          placeholder="Message…"
+          required
+          multiline
+          rows={4}
+          style={{ marginBottom: '1em' }}
+
+        />
+        <Button type="submit" style={{ margin: '1em', backgroundColor: '#FDB727', color: 'white' }}>
+          Submit
+        </Button>
+      </form>
+
+      {/* Error dialog */}
+      <Dialog open={isErrorDialogOpen} onClose={handleCloseErrorDialog}>
+        <DialogTitle>Error</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            Oops, something went wrong. Please try again later.
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCloseErrorDialog} style={{ margin: '1em', backgroundColor: '#FDB727', color: 'white' }}>
+            OK
+          </Button>
+        </DialogActions>
+      </Dialog>
+    </div>
   );
 }
 
