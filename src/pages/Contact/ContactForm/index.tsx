@@ -72,7 +72,7 @@ function ContactForm() {
       >
         <div className={`contact-form ${isMobile ? 'mobile-width' : ''}`}>
           {isSuccess && (
-          <div style={{ color: 'green', marginBottom: '10px' }}>
+          <div style={{ color: 'green', marginBottom: '10px', fontFamily: 'Inter' }}>
             Thank you for your message!
           </div>
           )}
