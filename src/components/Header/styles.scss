@@ -33,13 +33,11 @@
     // padding: 1em;
     align-items: center;
     flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     &__body {
-      // flex-direction: column;
-      // justify-content: flex-start;
       margin-bottom: 1em;
       align-items: center;
     }

@@ -1,0 +1,22 @@
+@use './../../styles/vars';
+.copyright {    
+  color: vars.$tertiary;
+
+  span {
+    font-weight: 600;
+  }
+  }
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+.copyright {
+text-align: right;
+}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 767px) {
+  .copyright {
+    text-align: center;
+    }
+}
+

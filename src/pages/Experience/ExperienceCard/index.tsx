@@ -1,37 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './styles.scss';
+import {
+  Button,
+} from '@mui/material';
 import { Experience } from '../../../@types';
-import experienceData from '../../../data/experienceData.json';
 
 interface ExperienceCardProps {
-  experience: Experience;
+  experiences: Experience[];
 }
 
-function ExperienceCard({ experience }: ExperienceCardProps) {
-  // Check if experience is undefined or empty
-  if (!experience || Object.keys(experience).length === 0) {
+function ExperienceCard({ experiences }: ExperienceCardProps) {
+  const [showAll, setShowAll] = useState(false);
+
+  // Check if experiences array is empty
+  if (!experiences || experiences.length === 0) {
     return <div>No experience data available</div>;
   }
 
+  // Slice the array to display a maximum of 2 cards or all cards based on showAll state
+  const displayedExperiences = showAll ? experiences : experiences.slice(0, 2);
+
   return (
     <div className="experience-card">
-      <div>
-        {experienceData.map(() => (
-          <>
-            <div className="experience-card__duration">
-              <h4 className="experience-card__year">{experience.startYear}</h4>
-              <h4 className="experience-card__year">{experience.endYear}</h4>
+      {displayedExperiences.map((experience) => (
+        <div key={experience.endYear} className="experience-card__body">
+          <div className="experience-card__duration">
+            <h4 className="experience-card__year">{experience.startYear}</h4>
+            <h4 className="experience-card__year">{experience.endYear}</h4>
+          </div>
+          <div className="experience-card__details">
+            <div className="experience-card__position">{experience.position}</div>
+            <div className="experience-card__company">{experience.company}</div>
+            <div className="experience-card__location">{experience.location}</div>
+            <div className="experience-card__description">
+              {experience.description}
             </div>
-            <div className="experience-card__details">
-              <div className="experience-card__position">{experience.position}</div>
-              <div className="experience-card__company">{experience.company}</div>
-              <div className="experience-card__location">{experience.location}</div>
-              <div className="experience-card__description">
-                {experience.description}
-              </div>
 
-              <div className="experience-card__skills">
-                {experience.skills.length > 0 && (
+            <div className="experience-card__skills">
+              {experience.skills.length > 0 && (
                 <ul className="experience-card__skills-list">
                   {experience.skills.map((skill) => (
                     <li key={skill} className="experience-card__skill">
@@ -39,13 +45,25 @@ function ExperienceCard({ experience }: ExperienceCardProps) {
                     </li>
                   ))}
                 </ul>
-                )}
-              </div>
+              )}
             </div>
-          </>
-        ))}
-      </div>
+          </div>
+        </div>
+      ))}
 
+      {experiences.length > 2 && !showAll && (
+        <Button
+          type="button"
+          className="read-more-button"
+          onClick={() => setShowAll(true)}
+          style={{
+            color: '#030303', // Change the text color to white
+            alignSelf: 'center', // Center the button horizontally
+          }}
+        >
+          Read More
+        </Button>
+      )}
     </div>
   );
 }

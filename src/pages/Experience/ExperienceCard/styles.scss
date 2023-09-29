@@ -3,22 +3,16 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .experience-card {
-    // background-color: #f0f0f0;
     padding: 1.5em;
     margin-bottom: 1.5em;
     border-radius: 0.5em;
     display: flex;
+    flex-direction: column;
     font-family: vars.$fbody;
     text-align: left;
     font-size: 0.875em; /* 14px/16=0.875em */
-    // line-height: 120%;
     align-items: first baseline;
     overflow: auto;
-    &:hover {
-      // box-shadow: 0 2px 4px rgba(38, 37, 37, 0.05);
-      background: 0 rgba(255, 255, 255, 0.2);
-      transition: opacity 0.3s ease-in-out;
-    }
 
     ul {
       display: flex;
@@ -35,14 +29,23 @@
       width: fit-content;
       font-size: 60%;
       font-weight: bold;
-      // box-shadow: 0 2px 4px rgba(38, 37, 37, 0.1);
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: row;
+      padding: 1.5em;
+      flex: 1;
+      &:hover {
+        background: 0 rgba(255, 255, 255, 0.2);
+        transition: opacity 0.3s ease-in-out;
+      }
     }
 
     &__duration {
       font-size: 110%;
       margin-bottom: 0.5em;
       display: flex;
-      justify-content: space-between;
       font-family: vars.$fheader;
       color: vars.$tertiary;
     }
@@ -66,7 +69,6 @@
     }
 
     &__location {
-      // margin-top: 0.5em;
       font-size: 80%;
       margin-bottom: 0.5em;
     }
@@ -84,8 +86,7 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 767px) {
   .experience-card {
-    padding: 0.5em 0.5em;
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
     font-family: vars.$fbody;
     text-align: left;
     font-size: 0.875em; /* 14px/16=0.875em */
@@ -151,6 +152,7 @@
 
     &__skills {
       display: flex;
+      margin-bottom: 1em;
     }
   }
 }

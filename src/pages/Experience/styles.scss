@@ -6,12 +6,15 @@
   .experience-list {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
 
   &__title {
-    text-align: right;
+    text-align: right;    
     padding-bottom: 1em;
   }
+
+  &__container {
+display: flex;
+justify-content: flex-start;  }
 
   &__link {
     font-family: vars.$ftitle;
@@ -51,7 +54,6 @@
   .experience-list {
     display: flex;
     flex-direction: column;
-    padding: 0.5em;
   
     &__title {
       padding: 1.5em 0em 1em 0em;

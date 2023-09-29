@@ -7,7 +7,6 @@ function Contact() {
       <h2 className="contact__title">contact</h2>
       <div className="contact__form">
         <ContactForm />
-
       </div>
 
     </div>

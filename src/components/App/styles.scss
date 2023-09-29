@@ -5,7 +5,6 @@
   .app {
     display: flex;
     height: 100vh; /* Ensure the app takes at least the full viewport height */
-    // flex: 1;
     overflow: hidden; // Hide overflow for the entire app
     background-color: vars.$background;
 
@@ -17,7 +16,7 @@
       padding: 3em;
     }
 
-    &__components {
+    &__header {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -30,13 +29,26 @@
     }
 
     &__route {
-      // display: flex;
+      display: flex;
+      justify-content: flex-end;
       overflow-y: scroll; // Add vertical scroll if necessary
       height: 100%;
-      max-width: 70%;
+      // max-width: 70%;
       padding: 1em; /* Add padding to create space inside the container */
       // box-sizing: border-box; /* Include padding in the element's total width */
-      // flex-grow: 1; /* Allow this section to grow and take available space */
+      flex-grow: 1; /* Allow this section to grow and take available space */
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow-y: auto; // Add vertical scroll if necessary
+      height: 100%; /* Set the height to 100% of the viewport height */
+      min-width: 30%;
       &::-webkit-scrollbar {
         display: none;
       }
