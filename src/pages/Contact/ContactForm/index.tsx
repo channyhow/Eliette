@@ -72,7 +72,10 @@ function ContactForm() {
       >
         <div className={`contact-form ${isMobile ? 'mobile-width' : ''}`}>
           {isSuccess && (
-          <div style={{ color: 'green', marginBottom: '10px', fontFamily: 'Inter' }}>
+          <div style={{
+            color: 'green', marginBottom: '10px', fontFamily: 'Inter', fontSize: '0.8em',
+          }}
+          >
             Thank you for your message!
           </div>
           )}
@@ -111,10 +114,10 @@ function ContactForm() {
 
           {/* Error dialog */}
           <Dialog open={isErrorDialogOpen} onClose={handleCloseErrorDialog}>
-            <DialogTitle>Error</DialogTitle>
+            <DialogTitle>Oopsie Daisy</DialogTitle>
             <DialogContent>
               <DialogContentText>
-                Oops, something went wrong. Please try again later.
+                <p>There's something about the email address entered, could you have a quick look?</p>
               </DialogContentText>
             </DialogContent>
             <DialogActions>

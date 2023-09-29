@@ -10,7 +10,7 @@ function Info() {
       <p className="info__body">
         Born in Paris and raised in Reunion Island, I completed my education in Paris and then embarked on
         {' '}
-        <span>a transformative journey in China</span>
+        <span>a journey in China</span>
         .
         {' '}
         <br />

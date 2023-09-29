@@ -13,8 +13,8 @@
     }
 
     p {
-
       padding-top: 1em;
+      padding-bottom: 1em;
     }
     span {
       font-weight: 600;
@@ -38,6 +38,11 @@
 
     span {
       font-weight: 600;
+    }
+    
+     p {
+      padding-top: 1em;
+      // padding-bottom: 1em;
     }
   }
 }
