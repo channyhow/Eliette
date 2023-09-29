@@ -49,9 +49,12 @@ flex-grow: 1;    ul {
 
     &__details {
       margin-left: 2em;
+      font-size: 90%;
     }
+
     &__school {
       font-weight: 500;
+      margin-bottom: 0.5em;
     }
 
     &__degree {
@@ -60,7 +63,6 @@ flex-grow: 1;    ul {
     }
 
     &__location {
-      font-size: 80%;
       margin-bottom: 0.5em;
     }
 
