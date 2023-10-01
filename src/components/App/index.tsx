@@ -22,14 +22,15 @@ function App() {
 
   return (
     <div className="app">
-      <BrowserRouter>
-        <div className="app__border">
-          <div className="app__header">
-            <Header />
-            <Footer />
-          </div>
-          <div className="app__body">
-            <div className="app__route">
+
+      <div className="app__border">
+        <div className="app__header">
+          <Header />
+          <Footer />
+        </div>
+        <div className="app__body">
+          <div className="app__route">
+            <BrowserRouter>
               <Routes>
                 {/* Render IntroPage only on desktop */}
                 {isDesktop && <Route path="/" element={<IntroPage />} />}
@@ -40,12 +41,13 @@ function App() {
                 <Route path="/exp" element={<Experience />} />
                 <Route path="*" element={<Error />} />
               </Routes>
-            </div>
-            <Copyright />
+            </BrowserRouter>
           </div>
-
+          <Copyright />
         </div>
-      </BrowserRouter>
+
+      </div>
+
       <BottomSocial />
     </div>
   );
