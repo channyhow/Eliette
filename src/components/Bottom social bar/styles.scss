@@ -2,11 +2,11 @@
  
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .bottom-social {
-    display: none;
-      }
-}
+// @media only screen and (min-width: 768px) {
+//   .bottom-social {
+//     display: none;
+//       }
+// }
 
 // /* Extra small devices (phones, 600px and down) */
 // @media only screen and (max-width: 600px) {
@@ -22,13 +22,7 @@ opacity: 0.5;
 bottom: 0;
 display: flex;
 justify-content: center;
-// border-radius: 3em;
+transition: opacity 0.3s;
 }
     }
 
-// /* Large devices (laptops/desktops, 992px and up) */
-// @media only screen and (min-width: 992px) {
-// }
-// /* Extra large devices (large laptops and desktops, 1200px and up) */
-// @media only screen and (min-width: 1200px) {
-// }

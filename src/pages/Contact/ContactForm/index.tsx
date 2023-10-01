@@ -117,7 +117,7 @@ function ContactForm() {
             <DialogTitle>Oopsie Daisy</DialogTitle>
             <DialogContent>
               <DialogContentText>
-                There's something about the email address entered,
+                There&apos;s something about the email address entered,
                 could you have a quick look?
               </DialogContentText>
             </DialogContent>

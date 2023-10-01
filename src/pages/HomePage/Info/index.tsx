@@ -6,7 +6,7 @@ import './styles.scss';
 function Info() {
   return (
     <div className="info">
-      <h2 className="info__title">bonjour</h2>
+      <h2 className="info__title">hi! I'm channy!</h2>
       <p className="info__body">
         Born in Paris and raised in Reunion Island, I completed my education in Paris and then embarked on
         {' '}

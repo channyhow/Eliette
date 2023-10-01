@@ -1,8 +1,12 @@
 @use "./../../styles/vars";
 
   .maintenance {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
  h1 {
   padding: 1em;
+  text-align: right;
  }
   }
 

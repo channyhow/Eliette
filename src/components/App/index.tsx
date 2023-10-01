@@ -3,12 +3,12 @@ import {
   BrowserRouter, Route, Routes,
 } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
+import { useEffect, useState } from 'react';
 import IntroPage from '../../pages/IntroPage';
 import HomePage from '../../pages/HomePage';
 import Header from '../Header';
 import Footer from '../Footer';
 import Contact from '../../pages/Contact';
-// import Projects from '../../pages/Projects';
 import Experience from '../../pages/Experience';
 import BottomSocial from '../Bottom social bar';
 import Error from '../../pages/404';
@@ -20,9 +20,30 @@ function App() {
   const isDesktop = useMediaQuery({ minWidth: 768 });
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
+  // State variable to track whether the user has scrolled down
+  const [scrolled, setScrolled] = useState(false);
+
+  // Function to handle the scroll event
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  // Add a scroll event listener when the component mounts
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div className="app">
-
       <div className="app__border">
         <div className="app__header">
           <Header />
@@ -45,10 +66,8 @@ function App() {
           </div>
           <Copyright />
         </div>
-
       </div>
-
-      <BottomSocial />
+      {isMobile && scrolled && <BottomSocial />}
     </div>
   );
 }
