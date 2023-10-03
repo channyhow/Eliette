@@ -1,5 +1,6 @@
 [
   {
+    "id": "01",
     "startYear": "2022",
     "endYear": "2023",
     "school": "Ecole O'Clock",
@@ -16,6 +17,7 @@
     ]
   },
   {
+    "id": "02",
     "startYear": "2009",
     "endYear": "2011",
     "school": "Beijing Language and Culture University",
@@ -25,6 +27,7 @@
   },
 
   {
+    "id": "03",
     "startYear": "2005",
     "endYear": "2008",
     "school": "ISCOM",

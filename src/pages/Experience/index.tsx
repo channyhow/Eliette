@@ -29,7 +29,7 @@ function ExperienceList() {
         {' '}
         in Asia. In 2017, I realized one of my dreams by launching
         {' '}
-        <span>"Les voyageuses label"</span>
+        <span>&quot;Les voyageuses label &quot;</span>
         {' '}
         in Hong Kong, blending my love for design, travel, and storytelling.
       </p>
