@@ -5,9 +5,9 @@ function Footer() {
   console.log('footer');
 
   return (
-  // <div className="footer">
-    <Socials />
-  // </div>
+    <div className="footer">
+      <Socials />
+    </div>
   );
 }
 

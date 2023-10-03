@@ -15,9 +15,6 @@
     overflow-y: auto; // Add vertical scroll if necessary
     // height: 100%; /* Set the height to 100% of the viewport height */
     min-width: 30%;
-    &::-webkit-scrollbar {
-      display: none;
-    }
   }
   &__body {
     display: flex;
@@ -26,9 +23,6 @@
     overflow-y: auto; // Add vertical scroll if necessary
     height: 100%; /* Set the height to 100% of the viewport height */
     min-width: 30%;
-    &::-webkit-scrollbar {
-      display: none;
-    }
   }
 }
 
@@ -36,9 +30,11 @@
 @media only screen and (max-width: 767px) {
   .app {
     flex-direction: column;
-    padding: 1em 2em;
+    padding: 3.5em 2em 1em;
     &__header {
       align-items: center;
+      overflow-y:unset; 
+
     }
     &__body {
       align-items: center;

@@ -1,52 +1,23 @@
 @use './../../styles/vars';
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+
 .footer {
-  padding: 1rem;
   text-align: center;
   display: flex;
   justify-content: space-between;
   align-items:last baseline;
   flex:1;
-
-
-
   &__title {
     font-size: 1.5em;
     color: vars.$primary;
-    padding: 1em;
   }
 }
-}
 
-// /* Extra small devices (phones, 600px and down) */
-// @media only screen and (max-width: 600px) {
-  
-// }
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 767px) {
   .footer {
-    display: none;
-    // justify-content: center;
-    // // align-items:last baseline;
-    // flex:1;
-  
-  
-  
-    // &__title {
-    //   font-size: 1.5em;
-    //   color: vars.$primary;
-    //   padding: 1em;
-    // }
+margin-bottom: 1em;
   }
 }
 
-// /* Large devices (laptops/desktops, 992px and up) */
-// @media only screen and (min-width: 992px) {
-
-// }
-// /* Extra large devices (large laptops and desktops, 1200px and up) */
-// @media only screen and (min-width: 1200px) {
-
-// }

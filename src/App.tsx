@@ -14,7 +14,6 @@ import BottomSocial from './components/Bottom social bar';
 import Error from './pages/404';
 import Maintenance from './pages/maintenance';
 import Copyright from './components/Copyright';
-// import { AppProvider } from './context/AppContext';
 import Navigation from './components/Navigation';
 
 function App() {
@@ -22,27 +21,27 @@ function App() {
   const isDesktop = useMediaQuery({ minWidth: 768 });
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
-  // State variable to track whether the user has scrolled down
-  const [scrolled, setScrolled] = useState(false);
+  // // State variable to track whether the user has scrolled down
+  // const [scrolled, setScrolled] = useState(false);
 
-  // Function to handle the scroll event
-  const handleScroll = () => {
-    if (window.scrollY > 0) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
-  };
+  // // Function to handle the scroll event
+  // const handleScroll = () => {
+  //   if (window.scrollY > 0) {
+  //     setScrolled(true);
+  //   } else {
+  //     setScrolled(false);
+  //   }
+  // };
 
-  // Add a scroll event listener when the component mounts
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+  // // Add a scroll event listener when the component mounts
+  // useEffect(() => {
+  //   window.addEventListener('scroll', handleScroll);
 
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  //   // Clean up the event listener when the component unmounts
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
 
   return (
     <div className="app">
@@ -66,8 +65,7 @@ function App() {
           <Copyright />
         </section>
       </BrowserRouter>
-
-      {isMobile && scrolled && <BottomSocial />}
+      {/* {isMobile && scrolled && <BottomSocial />} */}
     </div>
   );
 }

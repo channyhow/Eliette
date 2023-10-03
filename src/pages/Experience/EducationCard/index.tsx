@@ -20,6 +20,7 @@ interface EducationCardProps {
 }
 
 function EducationCard({ education }: EducationCardProps) {
+  const [showFullEducation, setShowFullEducation] = useState<ShowFullEducation>({});
   const [showAll, setShowAll] = useState(false);
 
   // Check if education is undefined or empty
@@ -27,7 +28,24 @@ function EducationCard({ education }: EducationCardProps) {
     return <div>No education data available</div>;
   }
 
-  // Slice the array to display a maximum of 2 cards or all cards based on showAll state
+  // Function to handle showing full education for all items
+  const handleShowFullEducation = () => {
+    setShowAll(!showAll); // Toggle the showAll state
+    setShowFullEducation(
+      education.reduce((acc, edu) => {
+        // accumulator
+        acc[edu.id] = true;
+        return acc;
+      }, {}),
+    );
+  };
+
+  // Function to handle hiding full education
+  const handleHideFullEducation = () => {
+    setShowAll(false);
+    setShowFullEducation({});
+  };
+
   const displayedEducation = showAll ? education : education.slice(0, 2);
 
   return (
@@ -89,21 +107,21 @@ function EducationCard({ education }: EducationCardProps) {
         </div>
       ))}
 
-      {education.length > 2 && !showAll && (
-        <Button
-          type="button"
-          className="read-more-button"
-          onClick={() => setShowAll(true)}
-          style={{
-            color: '#eeebe9', // Change the text color to white
-            alignSelf: 'center', // Center the button horizontally
-            backgroundColor: '#FDB727',
-            opacity: 0.8,
-          }}
-        >
-          Read More
-        </Button>
-      )}
+      <Button
+        type="button"
+        className="read-more-button"
+        onClick={showAll ? handleHideFullEducation : handleShowFullEducation}
+        style={{
+          margin: '1em',
+          padding: '0.5em',
+          color: '#FDB727',
+          alignSelf: 'flex-start',
+          opacity: 0.8,
+        }}
+      >
+        {showAll ? 'View less' : 'View full education'}
+      </Button>
+
     </div>
   );
 }

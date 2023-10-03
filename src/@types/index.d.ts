@@ -1,6 +1,6 @@
 export interface Education {
-  startYear: string;
-  endYear: string;
+  startYear: number;
+  endYear: number;
   school: string;
   degree: string;
   location: string;
@@ -8,8 +8,8 @@ export interface Education {
 }
 
 export interface Experience {
-  startYear: string;
-  endYear: string;
+  startYear: number;
+  endYear: number;
   company: string;
   position: string;
   location: string;

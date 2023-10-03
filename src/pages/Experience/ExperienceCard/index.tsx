@@ -5,11 +5,15 @@ import {
 } from '@mui/material';
 import { Experience } from '../../../@types';
 
+// Define a type for the keys in showFullDescriptions based on your Experience object
+type ShowFullDescriptions = Record<string, boolean>;
+
 interface ExperienceCardProps {
   experiences: Experience[];
 }
 
 function ExperienceCard({ experiences }: ExperienceCardProps) {
+  const [showFullDescriptions, setShowFullDescriptions] = useState<ShowFullDescriptions>({});
   const [showAll, setShowAll] = useState(false);
 
   // Check if experiences array is empty
@@ -17,12 +21,27 @@ function ExperienceCard({ experiences }: ExperienceCardProps) {
     return <div>No experience data available</div>;
   }
 
-  // Slice the array to display a maximum of 2 cards or all cards based on showAll state
-  const displayedExperiences = showAll ? experiences : experiences.slice(0, 2);
+  // Function to handle showing full descriptions for all experiences
+  const handleShowFullResume = () => {
+    setShowAll(true);
+    setShowFullDescriptions(
+      experiences.reduce((acc, experience) => {
+        // accumulator
+        acc[experience.endYear] = true;
+        return acc;
+      }, {}),
+    );
+  };
+
+  // Function to handle hiding full descriptions
+  const handleHideFullResume = () => {
+    setShowAll(false);
+    setShowFullDescriptions({});
+  };
 
   return (
     <div className="experience-card">
-      {displayedExperiences.map((experience) => (
+      {experiences.map((experience) => (
         <div key={experience.endYear} className="experience-card__body">
           <div className="experience-card__duration">
             <h4 className="experience-card__year">{experience.endYear}</h4>
@@ -31,13 +50,23 @@ function ExperienceCard({ experiences }: ExperienceCardProps) {
           <div className="experience-card__details">
             <div className="experience-card__position">{experience.position}</div>
             <div className="experience-card__company">
-              <a href="{experience.website}">{experience.company}</a>
+              <a href={experience.website}>{experience.company}</a>
+              {' '}
               -
               {' '}
               {experience.location}
             </div>
             <div className="experience-card__description">
-              {experience.description}
+              {showFullDescriptions[experience.endYear] ? (
+                experience.description // Show full description if showFullDescriptions is true
+              ) : (
+                <>
+                  {experience.description.slice(0, 100)}
+                  {' '}
+                  {/* Show the first 100 characters of the description */}
+                  {experience.description.length > 100}
+                </>
+              )}
             </div>
 
             <div className="experience-card__skills">
@@ -54,22 +83,20 @@ function ExperienceCard({ experiences }: ExperienceCardProps) {
           </div>
         </div>
       ))}
-
-      {experiences.length > 2 && !showAll && (
-        <Button
-          type="button"
-          className="read-more-button"
-          onClick={() => setShowAll(true)}
-          style={{
-            color: '#eeebe9', // Change the text color to white
-            alignSelf: 'center', // Center the button horizontally
-            backgroundColor: '#FDB727',
-            opacity: 0.8,
-          }}
-        >
-          Read More
-        </Button>
-      )}
+      <Button
+        type="button"
+        className="read-more-button"
+        onClick={showAll ? handleHideFullResume : handleShowFullResume}
+        style={{
+          margin: '1em',
+          padding: '0.5em',
+          color: '#FDB727',
+          alignSelf: 'flex-start',
+          opacity: 0.8,
+        }}
+      >
+        {showAll ? 'View less' : 'View full resume'}
+      </Button>
     </div>
   );
 }
