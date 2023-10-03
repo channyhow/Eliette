@@ -25,13 +25,17 @@ function ExperienceCard({ experiences }: ExperienceCardProps) {
       {displayedExperiences.map((experience) => (
         <div key={experience.endYear} className="experience-card__body">
           <div className="experience-card__duration">
-            <h4 className="experience-card__year">{experience.startYear}</h4>
             <h4 className="experience-card__year">{experience.endYear}</h4>
+            <h4 className="experience-card__year">{experience.startYear}</h4>
           </div>
           <div className="experience-card__details">
             <div className="experience-card__position">{experience.position}</div>
-            <div className="experience-card__company">{experience.company}</div>
-            <div className="experience-card__location">{experience.location}</div>
+            <div className="experience-card__company">
+              <a href="{experience.website}">{experience.company}</a>
+              -
+              {' '}
+              {experience.location}
+            </div>
             <div className="experience-card__description">
               {experience.description}
             </div>
@@ -57,8 +61,10 @@ function ExperienceCard({ experiences }: ExperienceCardProps) {
           className="read-more-button"
           onClick={() => setShowAll(true)}
           style={{
-            color: '#030303', // Change the text color to white
+            color: '#eeebe9', // Change the text color to white
             alignSelf: 'center', // Center the button horizontally
+            backgroundColor: '#FDB727',
+            opacity: 0.8,
           }}
         >
           Read More

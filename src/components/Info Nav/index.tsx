@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './styles.scss';
-// import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+import { NavLink } from 'react-router-dom';
 import Tech from '../Tech & skills';
 import Monstera from '../Icons/Monstera';
 
@@ -31,24 +31,21 @@ function InfoNav() {
 
   return (
     <div className="info-nav">
-      <ol>
-        <li>
-          <a
-            href="/exp"
-            onMouseEnter={() => handleMouseEnter(0)}
-            onMouseLeave={handleMouseLeave}
-            className={`info-nav__link ${hoveredIndex === 0 ? 'info-nav__link--hovered' : ''}`}
-          >
-            <span className="info-nav__link-text">Experience & Education</span>
-            {!isMobile && hoveredIndex === 0 && (
-              <Monstera className="info-nav__monstera" />
-            )}
-          </a>
-        </li>
-        <li>
-          <Tech />
-        </li>
-      </ol>
+
+      <NavLink
+        to="/exp"
+        onMouseEnter={() => handleMouseEnter(0)}
+        onMouseLeave={handleMouseLeave}
+        className={`info-nav__link ${hoveredIndex === 0 ? 'info-nav__link--hovered' : ''}`}
+      >
+        <span className="info-nav__link-text">Experience & Education</span>
+        {!isMobile && hoveredIndex === 0 && (
+        <Monstera className="info-nav__monstera" />
+        )}
+      </NavLink>
+
+      <Tech />
+
     </div>
   );
 }

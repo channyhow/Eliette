@@ -17,6 +17,7 @@ h2 {
   font-size: 2em; /* 30px/16=1.875em */
   font-family: vars.$ftitle;
   line-height: 1.5em;
+  font-weight: 600;
 }
 
 h3 {
@@ -30,7 +31,7 @@ h4 {
 }
 
 p {
-  font-size: 0.875em; /* 14px/16=0.875em */
+  // font-size: 0.875em; /* 14px/16=0.875em */
   font-family: vars.$fbody;
   line-height: 1.5em;
 }
@@ -41,6 +42,10 @@ a {
 
 ul, ol {
   list-style: none;
+}
+
+span {
+  font-weight: 600;
 }
 
 body {

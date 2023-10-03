@@ -1,23 +1,17 @@
 @use "./../../styles/vars";
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
   .contact {
     text-align: right;
-    flex: 1;
+
     &__title {
       padding-bottom: 1em;
     }
   }
-}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 767px) {
   .contact {
     padding: 1.5em 0em 1em 0em;
-    // display: flex;
-    // flex-direction: column;
-    // flex: 1;
+
     &__title {
       padding: 1.5em 0em 1em 0em;
       font-size: 1.5em;

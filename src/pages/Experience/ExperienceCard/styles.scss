@@ -1,174 +1,80 @@
 @use "./../../../styles/vars";
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .experience-card {
-    padding: 1.5em;
-    margin-bottom: 1.5em;
-    border-radius: 0.5em;
+.experience-card {
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  font-family: vars.$fbody;
+  text-align: left;
+  align-items: first baseline;
+  overflow: auto;
+
+  &__body {
     display: flex;
-    flex-direction: column;
-    font-family: vars.$fbody;
-    text-align: left;
-    font-size: 0.875em; /* 14px/16=0.875em */
-    align-items: first baseline;
-    overflow: auto;
-
-    ul {
-      display: flex;
-      margin: 1em 0 0 0;
-    }
-
-    li {
+    padding: 1.5em;
+    &:hover {
+      background: 0 rgba(255, 255, 255, 0.3);
+      transition: opacity 0.3s ease-in-out;
       border-radius: 0.5em;
-      background-color: vars.$secondary;
-      color: vars.$background;
-      margin: 0.3em;
-      padding: 0.7em 0.9em;
-      text-align: center;
-      width: fit-content;
-      font-size: 60%;
-      font-weight: bold;
-    }
-
-    &__body {
-      display: flex;
-      flex-direction: row;
-      padding: 1.5em;
-      flex: 1;
-      &:hover {
-        background: 0 rgba(255, 255, 255, 0.2);
-        transition: opacity 0.3s ease-in-out;
-      }
-    }
-
-    &__duration {
-      font-size: 110%;
-      margin-bottom: 0.5em;
-      display: flex;
-      font-family: vars.$fheader;
-      color: vars.$tertiary;
-    }
-
-    &__year {
-      margin: 0 0.5em;
-      display: flex;
-      justify-content: flex-end;
-    }
-
-    &__details {
-      margin-left: 2em;
-      font-size: 90%;
-    }
-    &__company {
-      font-weight: 500;
-      margin-bottom: 0.5em;
-    }
-
-    &__position {
-      margin-bottom: 0.5em;
-      font-weight: bold;
-    }
-
-    &__location {
-      margin-bottom: 0.5em;
-    }
-
-    &__skills {
-      display: flex;
     }
   }
-}
 
-// /* Extra small devices (phones, 600px and down) */
-// @media only screen and (max-width: 600px) {
-// }
+  &__duration {
+    font-size: 110%;
+    font-family: vars.$fheader;
+    color: vars.$tertiary;
+    opacity: 0.6;
+  }
+
+  &__year {
+    font-weight: 500;
+  }
+
+  &__details {
+    margin-left: 2em;
+    font-size: 90%;
+  }
+  &__company {
+    font-weight: 500;
+    font-size: 95%;
+    margin-bottom: 0.5em;
+    color: #918b88;
+  }
+
+  &__position {
+    margin-bottom: 0.5em;
+    font-weight: 600;
+  }
+
+  &__location {
+    margin-bottom: 0.5em;
+  }
+
+  &__skills {
+    display: flex;
+  }
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 767px) {
   .experience-card {
-    // padding: 0.5em;
-    // margin-bottom: 1em;
-    font-family: vars.$fbody;
-    text-align: left;
-    font-size: 0.875em; /* 14px/16=0.875em */
-    align-items: first baseline;
-    overflow: auto;
-    // &:hover {
-    //   background: 0 rgba(255, 255, 255, 0.2);
-    //   transition: opacity 0.3s ease-in-out;
-    // }
-
-    ul {
-      display: flex;
-      margin: 1em 0 0 0;
-    }
-
-    li {
-      border-radius: 0.5em;
-      background-color: vars.$secondary;
-      color: vars.$background;
-      margin: 0.3em;
-      padding: 0.7em 0.9em;
-      text-align: center;
-      width: fit-content;
-      font-size: 60%;
-      font-weight: bold;
-    }
+    padding: 0;
+    flex-direction: column;
 
     &__body {
-      display: flex;
       flex-direction: column;
-      // padding: 1.5em;
-      flex: 1;
-      // &:hover {
-      //   background: 0 rgba(255, 255, 255, 0.2);
-      //   transition: opacity 0.3s ease-in-out;
-      // }
+      padding: 0.5em;
     }
-
     &__duration {
-      font-size: 110%;
-      margin-bottom: 0.5em;
       display: flex;
-      font-family: vars.$fheader;
-      color: vars.$tertiary;
+      padding: 0 0 1em 0;
     }
-
     &__year {
-      margin: 0 0.5em 0 0;
-      display: flex;
-      justify-content: flex-end;
+      margin: 0 1em 0 0;
     }
-
     &__details {
-      // margin-left: 2em;
+      margin-left: 0;
       font-size: 90%;
-    }
-    &__company {
-      font-weight: 500;
-      margin-bottom: 0.5em;
-    }
-
-    &__position {
-      margin-bottom: 0.5em;
-      font-weight: bold;
-    }
-
-    &__location {
-      margin-bottom: 0.5em;
-    }
-
-    &__skills {
-      display: flex;
-      margin-bottom: 1.5em;
     }
   }
 }
-
-// /* Large devices (laptops/desktops, 992px and up) */
-// @media only screen and (min-width: 992px) {
-// }
-// /* Extra large devices (large laptops and desktops, 1200px and up) */
-// @media only screen and (min-width: 1200px) {
-// }

@@ -35,8 +35,9 @@ function EducationCard({ education }: EducationCardProps) {
       {displayedEducation.map((edu) => (
         <div key={edu.endYear} className="education-card__body">
           <div className="education-card__duration">
-            <h4 className="education-card__year">{edu.startYear}</h4>
             <h4 className="education-card__year">{edu.endYear}</h4>
+            <h4 className="education-card__year">{edu.startYear}</h4>
+
           </div>
           <div className="education-card__details">
             <div className="education-card__degree">{edu.degree}</div>
@@ -94,8 +95,10 @@ function EducationCard({ education }: EducationCardProps) {
           className="read-more-button"
           onClick={() => setShowAll(true)}
           style={{
-            color: '#030303', // Change the text color to white
+            color: '#eeebe9', // Change the text color to white
             alignSelf: 'center', // Center the button horizontally
+            backgroundColor: '#FDB727',
+            opacity: 0.8,
           }}
         >
           Read More

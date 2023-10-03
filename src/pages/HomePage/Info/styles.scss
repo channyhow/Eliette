@@ -1,54 +1,30 @@
 @use "./../../../styles/vars";
+.info {
+  width: 55%;
+  text-align: right;
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .info {
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-    width: 55%;
+  &__title {
+    padding: 0em 0em 1em 0em;
+  }
 
-    &__title {
-      padding-bottom: 1em;
-    }
-
-    p {
-      padding-top: 1em;
-      padding-bottom: 1em;
-    }
-    span {
-      font-weight: 600;
-    }
+  p {
+    padding-top: 1em;
+    font-size: 95%;
   }
 }
 
-// /* Extra small devices (phones, 600px and down) */
-// @media only screen and (max-width: 600px) {
-// }
-/* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 767px) {
   .info {
-    // display: flex;
-    // flex-direction: column;
-    // text-align: left;
+    text-align: left;
+    width: fit-content;
 
     &__title {
       padding: 1.5em 0em 1em 0em;
-      font-size: 1.5em;    }
-
-    span {
-      font-weight: 600;
+      font-size: 1.5em;
     }
-    
-     p {
-      padding-top: 1em;
-      // padding-bottom: 1em;
+
+    p {
+      padding: 0;
     }
   }
 }
-// /* Large devices (laptops/desktops, 992px and up) */
-// @media only screen and (min-width: 992px) {
-// }
-// /* Extra large devices (large laptops and desktops, 1200px and up) */
-// @media only screen and (min-width: 1200px) {
-// }

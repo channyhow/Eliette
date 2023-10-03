@@ -1,0 +1,47 @@
+@use "./styles/vars";
+
+.app {
+  display: flex;
+  height: 100vh; /* Ensure the app takes at least the full viewport height */
+  overflow: hidden; // Hide overflow for the entire app
+  background-color: vars.$background;
+  padding: 4em 10em;
+  justify-content: space-between;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: auto; // Add vertical scroll if necessary
+    // height: 100%; /* Set the height to 100% of the viewport height */
+    min-width: 30%;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    overflow-y: auto; // Add vertical scroll if necessary
+    height: 100%; /* Set the height to 100% of the viewport height */
+    min-width: 30%;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 767px) {
+  .app {
+    flex-direction: column;
+    padding: 1em 2em;
+    &__header {
+      align-items: center;
+    }
+    &__body {
+      align-items: center;
+    }
+  }
+}

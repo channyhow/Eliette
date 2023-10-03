@@ -18,7 +18,6 @@
       display: flex;
       align-items: baseline;
       justify-content: flex-end;
-      transition: transform 0.3s ease-in-out;
 
       &-text {
         font-size: 1.5em;
@@ -42,7 +41,6 @@
       font-size: 1em;
       vertical-align: middle;
       opacity: 0;
-      transition: opacity 0.3s ease-in-out;
       /* Add a color for the arrow icon */
       color: #030303;
 
@@ -54,9 +52,6 @@
   }
 }
 
-// /* Extra small devices (phones, 600px and down) */
-// @media only screen and (max-width: 600px) {
-// }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 767px) {
   .projects {
@@ -97,7 +92,6 @@
       font-size: 1em;
       vertical-align: middle;
       opacity: 0;
-      transition: opacity 0.3s ease-in-out;
       /* Add a color for the arrow icon */
       color: #030303;
 
