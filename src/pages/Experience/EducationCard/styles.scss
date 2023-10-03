@@ -69,7 +69,7 @@ ul {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 767px) {
   .education-card {
-    padding: 0;
+    // padding: 0;
     flex-direction: column;
 
     &__body {

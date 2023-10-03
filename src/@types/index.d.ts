@@ -1,4 +1,5 @@
 export interface Education {
+  id: any;
   startYear: number;
   endYear: number;
   school: string;

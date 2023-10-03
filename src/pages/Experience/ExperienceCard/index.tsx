@@ -24,13 +24,17 @@ function ExperienceCard({ experiences }: ExperienceCardProps) {
   // Function to handle showing full descriptions for all experiences
   const handleShowFullResume = () => {
     setShowAll(true);
-    setShowFullDescriptions(
-      experiences.reduce((acc, experience) => {
-        // accumulator
-        acc[experience.endYear] = true;
-        return acc;
-      }, {}),
-    );
+    setShowFullDescriptions((prevState) => {
+      // Create a copy of the previous state
+      const newState = { ...prevState };
+
+      // Set the 'endYear' property of each experience to true in the newState
+      experiences.forEach((experience) => {
+        newState[experience.endYear] = true;
+      });
+
+      return newState;
+    });
   };
 
   // Function to handle hiding full descriptions
@@ -39,9 +43,11 @@ function ExperienceCard({ experiences }: ExperienceCardProps) {
     setShowFullDescriptions({});
   };
 
+  const displayedExperience = showAll ? experiences : experiences.slice(0, 2);
+
   return (
     <div className="experience-card">
-      {experiences.map((experience) => (
+      {displayedExperience.map((experience) => (
         <div key={experience.endYear} className="experience-card__body">
           <div className="experience-card__duration">
             <h4 className="experience-card__year">{experience.endYear}</h4>

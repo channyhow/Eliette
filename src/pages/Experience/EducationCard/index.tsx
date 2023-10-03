@@ -20,7 +20,6 @@ interface EducationCardProps {
 }
 
 function EducationCard({ education }: EducationCardProps) {
-  const [showFullEducation, setShowFullEducation] = useState<ShowFullEducation>({});
   const [showAll, setShowAll] = useState(false);
 
   // Check if education is undefined or empty
@@ -31,19 +30,11 @@ function EducationCard({ education }: EducationCardProps) {
   // Function to handle showing full education for all items
   const handleShowFullEducation = () => {
     setShowAll(!showAll); // Toggle the showAll state
-    setShowFullEducation(
-      education.reduce((acc, edu) => {
-        // accumulator
-        acc[edu.id] = true;
-        return acc;
-      }, {}),
-    );
   };
 
   // Function to handle hiding full education
   const handleHideFullEducation = () => {
     setShowAll(false);
-    setShowFullEducation({});
   };
 
   const displayedEducation = showAll ? education : education.slice(0, 2);
