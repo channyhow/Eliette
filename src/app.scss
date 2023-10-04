@@ -9,22 +9,22 @@
   background: linear-gradient(250deg, #ecc8d7, #98c3d2);
   background-size: 600% 600%;
 
-  -webkit-animation: AnimationName 25s ease infinite;
-  -moz-animation: AnimationName 20s ease infinite;
-  animation: AnimationName 15s ease infinite;
+  -webkit-animation: Monstera 25s ease infinite;
+  -moz-animation: Monstera 20s ease infinite;
+  animation: Monstera 15s ease infinite;
 
 
-@-webkit-keyframes AnimationName {
+@-webkit-keyframes Monstera {
   0%{background-position:0% 44%}
   50%{background-position:100% 57%}
   100%{background-position:0% 44%}
 }
-@-moz-keyframes AnimationName {
+@-moz-keyframes Monstera {
   0%{background-position:0% 44%}
   50%{background-position:100% 57%}
   100%{background-position:0% 44%}
 }
-@keyframes AnimationName {
+@keyframes Monstera {
   0%{background-position:0% 44%}
   50%{background-position:100% 57%}
   100%{background-position:0% 44%}

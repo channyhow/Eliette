@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  color: rgb(255, 255, 255, 0.6);
+  color: rgb(255, 255, 255, 0.3);
 
   &__link {
     font-weight: 600;
@@ -41,18 +41,21 @@
 @media only screen and (max-width: 767px) {
   .navigation {
     padding-top: 1em;
-flex-direction: row;
-    &__link {
-      margin: 0em 0.2em 0em 0.2em;        
-      transition: transform 0.3s ease-in-out;
+    flex-direction: row;
 
-      &--hovered {
-      transform: scale(99%); /* Adjust the amount of slide as needed */
+    &__link {
+      margin: 0em 0.2em 0em 0.2em;
+      transition: opacity 0.3s ease-in-out;
+
+      &:hover {
+        opacity: 0.4; /* Adjust the amount of opacity as needed */
+        transform: none;
+      }
+    }
+
+    &__text {
+      text-transform: uppercase;
+      font-size: 90%;
     }
   }
-  &__text {
-    text-transform: uppercase;
-font-size: 90%;
-  }
-}
 }

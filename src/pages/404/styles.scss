@@ -1,22 +1,25 @@
 @use "./../../styles/vars";
 
   .error {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: rgb(255, 255, 255, 0.5) ;
-    // flex: 1; /* This allows the homepage to grow and take up remaining space */
+    text-align: right;
  h1 {
   padding: 1em;
+  // text-align: right;
+  color: rgb(255, 255, 255, 0.5) ;
+ }
+
+ .pepette {
+  width: 50%;
+  padding: 2em ;
  }
   }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 767px) {
   .error {
-    flex: 1; /* This allows the homepage to grow and take up remaining space */
- h1 {
-  padding: 2em;
- }
-  }
-}
+    text-align: center; 
+    h1 {
+      padding: 2em;
+     }
+      }
+    }

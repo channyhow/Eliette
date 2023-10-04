@@ -36,9 +36,9 @@
     &__icon {
       color: vars.$tertiary;
       padding: 0em 0.5em;
-      &--hovered {
-        transform: scale(1.1); /* Adjust the amount of slide as needed */
-        transition: transform 0.3s ease-in-out;
+      &:hover {
+        opacity: 0.4; /* Adjust the amount of opacity as needed */
+        transform: none;
       }
     }
   }

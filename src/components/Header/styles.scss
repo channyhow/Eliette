@@ -10,7 +10,15 @@
     margin: 1em;
     color: vars.$tertiary;
   }
+&__fname {
+  opacity: 0.6;
 }
+&__name {
+  opacity: 0.8;
+}
+}
+
+
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 767px) {
@@ -19,13 +27,26 @@
     text-align: center;
 
     &__title {
-      font-family: vars.$fbody;
-      font-size: 2em;
+      font-family: vars.$fheader;
       text-transform: uppercase;
-          letter-spacing: 0.2em;
-          font-weight: 600;
+      letter-spacing: 1px;
+      font-weight: 600;
+      width: max-content;
+      font-size: 6.5em;
     }
+    &__navlink {
+      display: flex;
+      align-items: center;
+    }
+//     &__fname {
+//       font-size: 2em;
+     
+// }
+//     &__name {
+//       font-size: 2em;
+     
 
+// }
     &__label {
       font-size: 90%;
       margin: 0.5em 0 1em 0;
