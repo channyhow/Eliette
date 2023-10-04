@@ -64,6 +64,7 @@
     padding: 0;
     flex-direction: column;
     align-items: flex-start;
+    box-sizing: border-box;
 
     &__body {
       flex-direction: column;

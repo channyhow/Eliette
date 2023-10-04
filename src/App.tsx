@@ -16,31 +16,8 @@ import Copyright from './components/Copyright';
 import Navigation from './components/Navigation';
 
 function App() {
-  // Define a media query for desktop screens
   const isDesktop = useMediaQuery({ minWidth: 768 });
   const isMobile = useMediaQuery({ maxWidth: 767 });
-
-  // // State variable to track whether the user has scrolled down
-  // const [scrolled, setScrolled] = useState(false);
-
-  // // Function to handle the scroll event
-  // const handleScroll = () => {
-  //   if (window.scrollY > 0) {
-  //     setScrolled(true);
-  //   } else {
-  //     setScrolled(false);
-  //   }
-  // };
-
-  // // Add a scroll event listener when the component mounts
-  // useEffect(() => {
-  //   window.addEventListener('scroll', handleScroll);
-
-  //   // Clean up the event listener when the component unmounts
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, []);
 
   return (
     <div className="app">

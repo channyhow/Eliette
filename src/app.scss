@@ -33,7 +33,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    overflow-y: auto; // Add vertical scroll if necessary
+    // overflow-y: auto; // Add vertical scroll if necessary
     // height: 100%; /* Set the height to 100% of the viewport height */
     min-width: 30%;
   }
@@ -51,14 +51,16 @@
 @media only screen and (max-width: 767px) {
   .app {
     flex-direction: column;
-    padding: 3em 2em 0em 2em;
+    padding: 3em 2em 4em 2em;
+    overflow-y: auto;
+
     &__header {
       align-items: center;
-      overflow-y:unset; 
 
     }
     &__body {
       align-items: center;
+      overflow-y:none; 
     }
   }
 }

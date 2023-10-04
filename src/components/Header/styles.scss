@@ -28,11 +28,12 @@
 
     &__title {
       font-family: vars.$fheader;
-      text-transform: uppercase;
+      // text-transform: uppercase;
       letter-spacing: 1px;
       font-weight: 600;
       width: max-content;
-      font-size: 6.5em;
+      font-size: 4.5em;
+      box-sizing: border-box;
     }
     &__navlink {
       display: flex;

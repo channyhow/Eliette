@@ -3,6 +3,7 @@
   .experience-list {
   display: flex;
   flex-direction: column;
+  align-content: flex-start;
   max-width: 80%;
 
   &__intro {
