@@ -7,11 +7,11 @@
       align-items: baseline;
       justify-content: flex-end;
       font-weight: 600;        
-      transition: transform 0.5s ease-in-out;
+      transition: opacity 0.5s ease-in-out;
 
       &--hovered {
-        transform: translateX(-20px); /* Adjust the amount of slide as needed */
-      }
+opacity: 1;      
+}
       &-text {
       padding-bottom: 1em;
       font-family: vars.$fnav;
@@ -25,9 +25,6 @@
     &__link {
       display: flex;
       justify-content: flex-start;
-      &--hovered {
-        transform: scale(110%); /* Adjust the amount of slide as needed */
-      }
     }
 
 }

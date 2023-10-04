@@ -4,7 +4,8 @@
     &__link {
       display: flex;
       justify-content: flex-end;
-      
+              transition: opacity 0.5s ease-in-out;
+
       &-text {
         font-weight: 600;
         padding-bottom: 0.5em;
@@ -12,8 +13,7 @@
       }
 
       &--hovered {
-        transform: translateX(-20px); /* Adjust the amount of slide as needed */
-        transition: transform 0.3s ease-in-out;
+        opacity: 1;      
       }
 
       ul {
@@ -37,8 +37,6 @@
     &__link {
       display: flex;
       align-items: baseline;
-      // justify-content: flex-end;
-      transition: transform 0.3s ease-in-out;
       &-text {
         font-weight: 600;
         vertical-align: middle;
@@ -46,10 +44,6 @@
         font-family: vars.$fnav;
       }
 
-      &--hovered {
-        transform: translateX(+5px); /* Adjust the amount of slide as needed */
-        transition: transform 0.3s ease-in-out;
-      }
 
       ul {
         display: flex;
