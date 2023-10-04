@@ -17,11 +17,10 @@ function Projects() {
   return (
     <div className="projects">
       <motion.main
-        className="main__container"
-        initial={{ width: 0 }}
-        animate={{ width: '100%' }}
-        exit={{ x: '100%', opacity: 0 }}
-        transition={{ duration: 2 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 3 }}
       >
 
         <h2 className="projects__title">projects</h2>

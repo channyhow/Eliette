@@ -48,7 +48,7 @@ function ExperienceCard({ experiences }: ExperienceCardProps) {
   return (
     <div className="experience-card">
       {displayedExperience.map((experience) => (
-        <div key={experience.endYear} className="experience-card__body">
+        <div key={experience.id} className="experience-card__body">
           <div className="experience-card__duration">
             <h4 className="experience-card__year">{experience.endYear}</h4>
             <h4 className="experience-card__year">{experience.startYear}</h4>

@@ -11,11 +11,10 @@ function ExperienceList() {
     <div className="experience-list">
       {' '}
       <motion.main
-        className="main__container"
-        initial={{ width: 0 }}
-        animate={{ width: '100%' }}
-        exit={{ x: '100%', opacity: 0 }}
-        transition={{ duration: 2 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 3 }}
       >
         {' '}
         <p className="experience-list__intro">
