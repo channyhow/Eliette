@@ -1,8 +1,9 @@
 import './app.scss';
 import {
-  BrowserRouter, Route, Routes, useLocation,
+  BrowserRouter, Route, Routes,
+  // useLocation,
 } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
+// import { AnimatePresence } from 'framer-motion';
 import { useMediaQuery } from 'react-responsive';
 import IntroPage from './pages/IntroPage';
 import HomePage from './pages/HomePage';
@@ -18,7 +19,7 @@ import Navigation from './components/Navigation';
 function App() {
   const isDesktop = useMediaQuery({ minWidth: 768 });
   const isMobile = useMediaQuery({ maxWidth: 767 });
-  const location = useLocation();
+  // const location = useLocation();
 
   return (
     <div className="app">
@@ -29,19 +30,19 @@ function App() {
           <Footer />
         </section>
         <section className="app__body">
-          <AnimatePresence>
-            <Routes location={location} key={location.pathname}>
-              {/* Render IntroPage only on desktop */}
-              {isDesktop && <Route path="/" element={<IntroPage />} />}
-              {isMobile && <Route path="/" element={<HomePage />} />}
-              <Route path="/home" element={<HomePage />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/projects" element={<Maintenance />} />
-              <Route path="/exp" element={<Experience />} />
-              <Route path="*" element={<Error />} />
-            </Routes>
-            <Copyright />
-          </AnimatePresence>
+          {/* <AnimatePresence> */}
+          <Routes>
+            {/* Render IntroPage only on desktop */}
+            {isDesktop && <Route path="/" element={<IntroPage />} />}
+            {isMobile && <Route path="/" element={<HomePage />} />}
+            <Route path="/home" element={<HomePage />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/projects" element={<Maintenance />} />
+            <Route path="/exp" element={<Experience />} />
+            <Route path="*" element={<Error />} />
+          </Routes>
+          <Copyright />
+          {/* </AnimatePresence> */}
         </section>
 
       </BrowserRouter>
