@@ -31,7 +31,8 @@ justify-content: flex-start;
 @media only screen and (max-width: 767px) {
   .experience-list {
     max-width: 95%;
-  
+    margin-bottom: 2em;
+
     &__intro {
       font-size: 95%;
       padding: 1em 0 1em 0;
