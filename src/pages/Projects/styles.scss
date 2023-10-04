@@ -25,6 +25,7 @@
         color: #030303;
         padding-bottom: 1em;
         font-family: vars.$ftitle;
+          transition: transform 0.3s ease-in-out;
 
         &--hovered {
           transform: translateX(
@@ -32,7 +33,6 @@
           ); /* Adjust the amount of slide as needed */
           font-family: vars.$fheader;
           font-size: 210%;
-          transition: transform 0.3s ease-in-out;
         }
       }
     }
@@ -43,6 +43,7 @@
       opacity: 0;
       /* Add a color for the arrow icon */
       color: #030303;
+      transition: opacity 0.3s ease-in-out;
 
       &--visible {
         opacity: 1;
@@ -83,7 +84,6 @@
           ); /* Adjust the amount of slide as needed */
           font-family: vars.$fheader;
           font-size: 210%;
-          transition: transform 0.3s ease-in-out;
         }
       }
     }

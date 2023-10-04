@@ -3,14 +3,13 @@ import {
   BrowserRouter, Route, Routes,
 } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import IntroPage from './pages/IntroPage';
 import HomePage from './pages/HomePage';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Contact from './pages/Contact';
 import Experience from './pages/Experience';
-import BottomSocial from './components/Bottom social bar';
 import Error from './pages/404';
 import Maintenance from './pages/maintenance';
 import Copyright from './components/Copyright';

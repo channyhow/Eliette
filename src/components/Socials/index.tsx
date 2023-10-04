@@ -3,7 +3,7 @@ import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import SmartphoneIcon from '@mui/icons-material/Smartphone';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import InstagramIcon from '@mui/icons-material/Instagram';
+// import InstagramIcon from '@mui/icons-material/Instagram';
 import './styles.scss';
 
 function Socials() {
@@ -19,7 +19,7 @@ function Socials() {
 
   const socialIcons = [
     { icon: <AlternateEmailIcon />, href: 'mailto:channyhow@gmail.com' },
-    { icon: <InstagramIcon />, href: 'https://www.instagram.com/eliettenmissy/' },
+    // { icon: <InstagramIcon />, href: 'https://www.instagram.com/eliettenmissy/' },
     { icon: <GitHubIcon />, href: 'https://github.com/channyhow' },
     { icon: <LinkedInIcon />, href: 'https://www.linkedin.com/in/channy-how' },
     { icon: <SmartphoneIcon />, href: 'tel:+33788484006' },

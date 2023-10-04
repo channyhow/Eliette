@@ -4,10 +4,31 @@
   display: flex;
   height: 100vh; /* Ensure the app takes at least the full viewport height */
   overflow: hidden; // Hide overflow for the entire app
-  background-color: vars.$background;
   padding: 4em 10em;
   justify-content: space-between;
+  background: linear-gradient(250deg, #ecc8d7, #98c3d2);
+  background-size: 600% 600%;
 
+  -webkit-animation: AnimationName 25s ease infinite;
+  -moz-animation: AnimationName 20s ease infinite;
+  animation: AnimationName 15s ease infinite;
+
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 44%}
+  50%{background-position:100% 57%}
+  100%{background-position:0% 44%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 44%}
+  50%{background-position:100% 57%}
+  100%{background-position:0% 44%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 44%}
+  50%{background-position:100% 57%}
+  100%{background-position:0% 44%}
+}
   &__header {
     display: flex;
     flex-direction: column;
@@ -30,7 +51,7 @@
 @media only screen and (max-width: 767px) {
   .app {
     flex-direction: column;
-    padding: 3.5em 2em 1em;
+    padding: 3em 2em 0em 2em;
     &__header {
       align-items: center;
       overflow-y:unset; 

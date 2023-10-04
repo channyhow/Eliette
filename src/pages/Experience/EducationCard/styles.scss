@@ -22,9 +22,10 @@ ul {
     &__body {
       display: flex;
       padding: 1.5em;
+      transition: background-color 0.3s ease, border-radius 0.3s ease;
+
       &:hover {
-        background: 0 rgba(255, 255, 255, 0.3);
-        transition: opacity 0.3s ease-in-out;
+        background: 0 rgba(255, 255, 255, 0.2);
         border-radius: 0.5em;
     }
   }
@@ -71,10 +72,11 @@ ul {
   .education-card {
     // padding: 0;
     flex-direction: column;
+    align-items: flex-start;
 
     &__body {
       flex-direction: column;
-      padding: 0em;
+      padding: 1em;
     }
     &__duration {
       display: flex;
