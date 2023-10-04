@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import './styles.scss';
 
 function IntroPage() {
@@ -28,10 +29,20 @@ function IntroPage() {
 
   return (
     <div className={`intro ${fadeOut ? 'intro--fade-out' : ''}`}>
-      <h2 className={`intro__name ${fadeOut ? 'intro__name--fade-out' : ''}`}>bonjour</h2>
-      {/* {fadeIn ? (
+      {' '}
+      <motion.main
+        className="main__container"
+        initial={{ width: 0 }}
+        animate={{ width: '100%' }}
+        exit={{ x: '100%', opacity: 0 }}
+        transition={{ duration: 2 }}
+      >
+
+        <h2 className={`intro__name ${fadeOut ? 'intro__name--fade-out' : ''}`}>bonjour</h2>
+        {/* {fadeIn ? (
         <h1 className={`intro__label ${fadeIn ? 'intro__label--fade-in' : ''}`}> Channy</h1>
       ) : null} */}
+      </motion.main>
     </div>
   );
 }
