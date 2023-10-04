@@ -96,7 +96,7 @@ function ExperienceCard({ experiences }: ExperienceCardProps) {
         style={{
           margin: '1em',
           padding: '0.5em',
-          color: '#FDB727',
+          color: 'rgb(255, 255, 255, 0.5)',
           alignSelf: 'flex-start',
           opacity: 0.8,
         }}

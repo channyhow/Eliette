@@ -107,7 +107,7 @@ function ContactForm() {
               rows={4}
               style={{ marginBottom: '1em' }}
             />
-            <Button type="submit" style={{ margin: '1em', backgroundColor: '#FDB727', color: 'white' }}>
+            <Button type="submit" style={{ margin: '1em', backgroundColor: 'rgb(255, 255, 255, 0.3)', color: 'white' }}>
               Submit
             </Button>
           </form>
@@ -122,7 +122,7 @@ function ContactForm() {
               </DialogContentText>
             </DialogContent>
             <DialogActions>
-              <Button onClick={handleCloseErrorDialog} style={{ margin: '1em', backgroundColor: '#FDB727', color: 'white' }}>
+              <Button onClick={handleCloseErrorDialog} style={{ margin: '1em', backgroundColor: 'rgb(255, 255, 255, 0.3)', color: 'white' }}>
                 OK
               </Button>
             </DialogActions>

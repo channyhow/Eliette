@@ -11,9 +11,11 @@
     &__icon {
       display: flex;
       align-items: baseline;
+      color: rgb(255, 255, 255, 0.5);        
+      transition: transform 0.3s ease-in-out;
+
       &--hovered {
         transform: translateX(+20px); /* Adjust the amount of slide as needed */
-        transition: transform 0.3s ease-in-out;
       }
     }
   }
