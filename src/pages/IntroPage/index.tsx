@@ -6,13 +6,13 @@ import './styles.scss';
 function IntroPage() {
   const navigate = useNavigate();
   // // appearing
-  // const [fadeIn, setFadeIn] = useState(false);
+  const [fadeIn, setFadeIn] = useState(false);
   // disappearing
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      // setFadeIn(true);
+      setFadeIn(true);
       // Redirect to the homepage after the fade-out animation
       setTimeout(() => {
         navigate('/home');
@@ -38,9 +38,9 @@ function IntroPage() {
       >
 
         <h2 className={`intro__name ${fadeOut ? 'intro__name--fade-out' : ''}`}>bonjour</h2>
-        {/* {fadeIn ? (
-        <h1 className={`intro__label ${fadeIn ? 'intro__label--fade-in' : ''}`}> Channy</h1>
-      ) : null} */}
+        {fadeIn ? (
+          <h1 className={`intro__label ${fadeIn ? 'intro__label--fade-in' : ''}`}> Channy</h1>
+        ) : null}
       </motion.main>
     </div>
   );
