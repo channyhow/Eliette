@@ -13,9 +13,8 @@
     transition: opacity 0.5s ease-in-out;
 
     &--hovered {
-      opacity: 1;      
-     /* Adjust the amount of slide as needed */
-  } 
+      opacity:0.5;
+    }
 }
 
   &__text {
@@ -30,10 +29,10 @@
     opacity: 0;
     /* Add a color for the arrow icon */
     color: #030303;
-      transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
 
     &--visible {
-      opacity: 0.5;
+      opacity:0.5;
     }
   }
 }
@@ -46,12 +45,6 @@
 
     &__link {
       margin: 0em 0.2em 0em 0.2em;
-      transition: opacity 0.3s ease-in-out;
-
-      &:hover {
-        opacity: 0.4; /* Adjust the amount of opacity as needed */
-        transform: none;
-      }
     }
 
     &__text {
