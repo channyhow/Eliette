@@ -18,11 +18,11 @@ function Socials() {
   };
 
   const socialIcons = [
-    { icon: <AlternateEmailIcon />, href: 'mailto:channyhow@gmail.com' },
-    // { icon: <InstagramIcon />, href: 'https://www.instagram.com/eliettenmissy/' },
-    { icon: <GitHubIcon />, href: 'https://github.com/channyhow' },
-    { icon: <LinkedInIcon />, href: 'https://www.linkedin.com/in/channy-how' },
-    { icon: <SmartphoneIcon />, href: 'tel:+33788484006' },
+    { icon: <AlternateEmailIcon />, href: 'mailto:channyhow@gmail.com', target: 'channyh_email' },
+    // { icon: <InstagramIcon />, href: 'https://www.instagram.com/eliettenmissy/' ,target: 'channy_phone'},
+    { icon: <GitHubIcon />, href: 'https://github.com/channyhow', target: 'channyh_github' },
+    { icon: <LinkedInIcon />, href: 'https://www.linkedin.com/in/channy-how', target: 'channyh_linkedin' },
+    { icon: <SmartphoneIcon />, href: 'tel:+33788484006', target: 'channyh_phone' },
   ];
 
   return (
