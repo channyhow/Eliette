@@ -14,9 +14,28 @@
     text-align: center;
     margin-top: 2em;
     padding: 2em 0 1em 0;
-
-    bottom: 0;
-    position: absolute;
+    flex-grow: 1;
     font-size: 80%;
   }
 }
+
+// /* Medium devices (landscape tablets, 768px and up) */
+// @media only screen and (min-width: 768px) {
+//   .copyright {
+//     flex-grow: 1;
+//     }
+// }
+
+// /* Large devices (laptops/desktops, 992px and up) */
+// @media only screen and (min-width: 992px) {
+//   .copyright {
+//     flex-grow: 1;
+//     }
+// }
+
+// /* Extra large devices (large laptops and desktops, 1200px and up) */
+// @media only screen and (min-width: 1200px) {
+// .copyright {
+// flex-grow: 1;
+// }
+// }

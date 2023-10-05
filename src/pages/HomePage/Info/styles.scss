@@ -51,27 +51,27 @@
   //   }
   // }
   
-  //For Big TV's (HD Screens) 
-  @media screen and (min-width: 1280px) {
+//   //For Big TV's (HD Screens) 
+//   @media screen and (min-width: 1280px) {
+//     .info{
+//       &__body {
+// font-size: 110%;
+//       }
+//       &__title {
+//         font-size: 3em;
+//       }
+//     }
+//   }
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1920px) {
     .info{
       &__body {
 font-size: 110%;
       }
       &__title {
-        font-size: 3em;
+        font-size: 2em;
       }
     }
   }
-  
-  // /* Extra large devices (large laptops and desktops, 1200px and up) */
-  // @media only screen and (min-width: 1920px) {
-  //   .info{
-  //     &__body {
-
-  //     }
-  //     &__title {
-        
-  //     }
-  //   }
-  // }
   

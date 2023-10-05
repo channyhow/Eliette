@@ -62,20 +62,26 @@ justify-content: flex-start;
 }
 }
 
-// /* Large devices (laptops/desktops, 992px and up) */
-// @media only screen and (min-width: 992px) {
-//   .info{
-//     &__body {
-
-//     }
-//     &__title {
-      
-//     }
-//   }
-// }
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .experience-list{
+    &__title {
+      font-size: 2em;
+    }
+  }
+}
 
 //For Big TV's (HD Screens) 
 @media screen and (min-width: 1280px) {
+  .experience-list{
+    &__title {
+      font-size: 2em;
+    }
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1920px) {
   .experience-list{
     &__intro {
 font-size: 110%;
@@ -85,15 +91,3 @@ font-size: 110%;
     }
   }
 }
-
-// /* Extra large devices (large laptops and desktops, 1200px and up) */
-// @media only screen and (min-width: 1920px) {
-//   .info{
-//     &__body {
-
-//     }
-//     &__title {
-      
-//     }
-//   }
-// }

@@ -51,7 +51,7 @@
   .app {
     flex-direction: column;
     padding: 3em 2em 4em 2em;
-    overflow-y: auto;
+    overflow-y: unset;
 
     &__header {
       align-items: center;
@@ -59,7 +59,7 @@
     }
     &__body {
       align-items: center;
-      overflow-y:none; 
+      overflow-y:unset; 
     }
   }
 }

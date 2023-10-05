@@ -5,42 +5,32 @@ import './styles.scss';
 
 function IntroPage() {
   const navigate = useNavigate();
-  // // appearing
-  // const [fadeIn, setFadeIn] = useState(false);
-  // disappearing
-  const [fadeOut, setFadeOut] = useState(false);
+  const [showDot, setShowDot] = useState(false); // State to manage the dot
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      // setFadeIn(true);
-      // Redirect to the homepage after the fade-out animation
-      setTimeout(() => {
-        navigate('/home');
-      }, 4000);
-    }, 1000);
-
-    // After 3 second, start the fade-out animation
-    setTimeout(() => {
-      setFadeOut(true);
+      setShowDot(true); // Show the dot after 2 seconds
     }, 2000);
+
+    setTimeout(() => {
+      navigate('/home'); // Redirect to the homepage after 4 seconds
+    }, 4000);
 
     return () => clearTimeout(timer);
   }, [navigate]);
 
   return (
-    <div className={`intro ${fadeOut ? 'intro--fade-out' : ''}`}>
-      {' '}
+    <div className={`intro ${showDot ? 'intro--fade-out' : ''}`}>
       <motion.main
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 3 }}
+        transition={{ duration: 2 }}
       >
-
-        <h2 className={`intro__name ${fadeOut ? 'intro__name--fade-out' : ''}`}>bonjour</h2>
-        {/* {fadeIn ? (
-          <h1 className={`intro__label ${fadeIn ? 'intro__label--fade-in' : ''}`}> Channy</h1>
-        ) : null} */}
+        <h2 className={`intro__name ${showDot ? 'intro__name--fade-out' : ''}`}>
+          bonjour
+          {showDot && '.'}
+        </h2>
       </motion.main>
     </div>
   );

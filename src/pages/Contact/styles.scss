@@ -1,30 +1,110 @@
 @use "./../../styles/vars";
+.contact {
+  &__title {
+    padding-bottom: 1em;
+    color: rgb(255, 255, 255, 0.5);
+  }
+  p {
+    padding-bottom: 1em;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
   .contact {
-    text-align: right;
+    max-width: 90%;
 
     &__title {
-      padding-bottom: 1em;
-      color: rgb(255, 255, 255, 0.5) ;
+      display: none;
     }
+
     p {
-      font-size: 90%;
-      padding: 2em;
+      font-size: 80%;
+      text-align: center;
+      padding-bottom: 1em;
     }
   }
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 600px) {
   .contact {
-    padding: 1.5em 0em 1em 0em;
-    margin-bottom: 2em;
+    max-width: 90%;
+    display: flex;
+    justify-content: flex-end;
 
     &__title {
-  display: none;
+      text-align: right;
     }
 
     p {
-      font-size: 90%;
+      font-size: 80%;
+      text-align: right;
+      padding-bottom: 1em;      
+      margin-left: 5em;
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .contact {
+    // text-align: center;
+    display: flex;
+    align-items: flex-end;
+
+    &__body {
+      font-size: 1em;
+    }
+    &__title {
+      font-size: 1.5em;
+    }
+
+    p {
       text-align: center;
+      padding-bottom: 1em;      
+      margin-left: 0;
+    }
+  }
+}
+
+// /* Large devices (laptops/desktops, 992px and up) */
+// @media only screen and (min-width: 992px) {
+//   .info{
+//     &__body {
+
+//     }
+//     &__title {
+
+//     }
+//   }
+// }
+
+//   //For Big TV's (HD Screens)
+//   @media screen and (min-width: 1280px) {
+//     .info{
+//       &__body {
+// font-size: 110%;
+//       }
+//       &__title {
+//         font-size: 3em;
+//       }
+//     }
+//   }
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1920px) {
+  .contact {
+    &__body {
+      font-size: 110%;
+    }
+    &__title {
+      font-size: 2em;
+    }
+    p {
+      text-align: center;
+      padding-bottom: 1em;      
+      margin-left: 0;
     }
   }
 }
