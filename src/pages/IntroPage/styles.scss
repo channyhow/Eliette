@@ -58,4 +58,30 @@
   font-size: 1em;
 }
 
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .intro{
+font-size: 1em;
+  }
+}
 
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .intro{
+    font-size: 1.5em;
+  }
+}
+
+//For Big TV's (HD Screens) 
+@media screen and (min-width: 1280px) {
+  .intro{
+    font-size: 1.5em;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1920px) {
+  .intro{
+    font-size: 1.5em;
+  }
+}

@@ -64,25 +64,43 @@
   }
 }
 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .app{
+    padding: 3em 2em 4em 2em;
+}
+}
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .app{
-    padding: 4em 4em;
+    padding: 2em 4em;
 }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .app{
-    padding: 4em 10em;
+    padding: 4em 4em;
+}
+}
+
+//For Big TV's (HD Screens) 
+@media screen and (min-width: 1280px) {
+  .app{
+    padding: 5em 5em;
 }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1920px) {
   .app{
-      padding: 10em 30em;
+      padding: 15em 35em;
   }
-
 }
+
+// //For 4K Displays (Ultra HD)
+//   @media screen and (min-width: 3840px) {
+
+// }
 

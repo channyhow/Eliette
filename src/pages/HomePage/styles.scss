@@ -4,12 +4,11 @@
     display: flex;
 justify-content: flex-end;
 }
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 767px) {
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
     .home {
     justify-content: flex-start;
     margin-bottom: 2em;
 // display: none;
 }
 }
-
