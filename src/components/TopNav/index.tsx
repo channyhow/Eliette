@@ -29,7 +29,11 @@ function TopNav() {
   //   };
   // }, []);
 
-  const pageName = {
+  type PageNameMap = {
+    [key: string]: string;
+  };
+
+  const pageName: PageNameMap = {
     '/home': 'Hey there!',
     '/exp': 'Work',
     '/projects': 'Projects',

@@ -94,56 +94,56 @@
   }
 }
 
-// /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .navigation {
-    &__link {
-      &--hovered {
+// // /* Large devices (laptops/desktops, 992px and up) */
+// @media only screen and (min-width: 992px) {
+//   .navigation {
+//     &__link {
+//       &--hovered {
 
-      }
-    }
-    &__monstera {
-    &--visible {
+//       }
+//     }
+//     &__monstera {
+//     &--visible {
 
-    }
-    }
-    &__label {
-    }
-  }
-}
+//     }
+//     }
+//     &__label {
+//     }
+//   }
+// }
 
-//For Big TV's (HD Screens)
-@media screen and (min-width: 1280px) {
-  .navigation {
-    &__link {
-      &--hovered {
+// //For Big TV's (HD Screens)
+// @media screen and (min-width: 1280px) {
+//   .navigation {
+//     &__link {
+//       &--hovered {
 
-      }
-    }
-    &__monstera {
-    &--visible {
+//       }
+//     }
+//     &__monstera {
+//     &--visible {
 
-    }
-    }
-    &__label {
-    }
-  }
-}
+//     }
+//     }
+//     &__label {
+//     }
+//   }
+// }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1920px) {
-  .navigation {
-    &__link {
-      &--hovered {
+// /* Extra large devices (large laptops and desktops, 1200px and up) */
+// @media only screen and (min-width: 1920px) {
+//   .navigation {
+//     &__link {
+//       &--hovered {
 
-      }
-    }
-    &__monstera {
-    &--visible {
+//       }
+//     }
+//     &__monstera {
+//     &--visible {
 
-    }
-    }
-    &__label {
-    }
-  }
-}
+//     }
+//     }
+//     &__label {
+//     }
+//   }
+// }
