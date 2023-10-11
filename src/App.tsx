@@ -26,6 +26,8 @@ function App() {
             {/* Render IntroPage only on desktop */}
             {isDesktop && <Route path="/" element={<IntroPage />} />}
             {isMobile && <Route path="/" element={<IntroPage />} />}
+
+            <Route path="/" element={<HomePage />} />
             <Route path="/home" element={<HomePage />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/projects" element={<Maintenance />} />
