@@ -3,8 +3,8 @@ import {
   BrowserRouter, Route, Routes,
 
 } from 'react-router-dom';
-import { useMediaQuery } from 'react-responsive';
-import IntroPage from './pages/IntroPage';
+// import { useMediaQuery } from 'react-responsive';
+// import IntroPage from './pages/IntroPage';
 import HomePage from './pages/HomePage';
 import Contact from './pages/Contact';
 import Experience from './pages/Experience';
@@ -14,8 +14,8 @@ import TopNav from './components/TopNav';
 import BottomNav from './components/BottomNav';
 
 function App() {
-  const isDesktop = useMediaQuery({ minWidth: 768 });
-  const isMobile = useMediaQuery({ maxWidth: 767 });
+  // const isDesktop = useMediaQuery({ minWidth: 768 });
+  // const isMobile = useMediaQuery({ maxWidth: 767 });
 
   return (
     <div className="app">
@@ -24,8 +24,8 @@ function App() {
         <section className="app__routes">
           <Routes>
             {/* Render IntroPage only on desktop */}
-            {isDesktop && <Route path="/" element={<IntroPage />} />}
-            {isMobile && <Route path="/" element={<IntroPage />} />}
+            {/* {isDesktop && <Route path="/" element={<IntroPage />} />}
+            {isMobile && <Route path="/" element={<IntroPage />} />} */}
 
             <Route path="/" element={<HomePage />} />
             <Route path="/home" element={<HomePage />} />
