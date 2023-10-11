@@ -19,7 +19,7 @@ function Info() {
         <br />
         {/* I'm also proficient in Photoshop and Illustrator. */}
       </p>
-      {/* <p className="info__body">
+      <p className="info__body">
         My priority is creating
         {' '}
         <span>responsive</span>
@@ -29,7 +29,7 @@ function Info() {
         <br />
 
         I believe in design-driven innovation and constantly evolve in the web development universe.
-      </p> */}
+      </p>
       <p className="info__body">
         Let's
         {' '}

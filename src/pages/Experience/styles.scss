@@ -4,16 +4,18 @@
   display: flex;
   flex-direction: column;
   align-content: flex-start;
-  max-width: 80%;
+  // max-width: 80%;
+  margin: 2.5em 0 0 0;
 
   &__intro {
-    padding: 1em;
+    padding: 0 0 1em 0;
   }
 
   &__title {
-    text-align: right;    
-    padding: 1em;
-    color: rgb(255, 255, 255, 0.5) ;
+    letter-spacing: 2px;
+    padding: 2em 0.5em;
+    font-weight: 500;    color: vars.$primary ;
+    opacity: 0.8;
   }
 
   &__container {
@@ -24,35 +26,36 @@ justify-content: flex-start;
 
 
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .experience-list {
-    max-width: 95%;
-    margin-bottom: 2em;
+// /* Extra small devices (phones, 600px and down) */
+// @media only screen and (max-width: 600px) {
+//   .experience-list {
+//     max-width: 95%;
+//     margin-bottom: 2em;
+//     margin: 6em 0 0 0;
 
-    &__intro {
-      font-size: 90%;
-      padding: 1em 0 1em 0;
-    }
+//     &__intro {
+//       font-size: 90%;
+//       padding: 1em 0 1em 0;
+//     }
   
-    &__title {
-      text-align: left;    
-      padding:  1em 0 1em 0;
-      font-size: 1.5em;
-    }
+//     &__title {
+//       text-align: left;    
+//       padding:  1em 0 1em 0;
+//       font-size: 1.5em;
+//     }
   
-    &__container {
-  display: flex;
-  justify-content: flex-start;  
-  }
-}
-}
+//     &__container {
+//   display: flex;
+//   justify-content: flex-start;  
+//   }
+// }
+// }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .experience-list{
+    margin: 0em 0 0 0;
     max-width: 70%;
-
     &__intro {
       font-size: 90%;
     }

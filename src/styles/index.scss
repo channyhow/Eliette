@@ -2,6 +2,8 @@
 @use "vars";
 
 /* Reset */
+
+
 * {
   margin: 0;
   padding: 0;
@@ -18,28 +20,32 @@ h2 {
   font-family: vars.$ftitle;
   line-height: 1.5em;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 h3 {
   font-size: 1.5em; /* 30px/16=1.875em */
-  font-family: vars.$ftitle;
+  font-family: vars.$fheader;
+  text-transform: uppercase;
 }
 
 h4 {
   font-size: 1em; /* 30px/16=1.875em */
   font-family: vars.$fbody;
+  text-transform: uppercase;
 }
 
 p {
   font-family: vars.$fbody;
-  line-height: 1.5em;
+  line-height: 2em;
 }
 
 a {
   text-decoration: none;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -51,8 +57,9 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
+  color: black;
   background-color: vars.$background;
-  color: white;
+
 }
 
 html {

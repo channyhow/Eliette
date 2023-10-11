@@ -14,18 +14,18 @@
     padding: 1.5em;      
     margin-bottom: 1em;
     transition: background-color 0.3s ease, border-radius 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.2) ;
+    border: 1px solid rgba(3, 3, 3, 0.1) ;
     border-radius: 0.5em;
 
     &:hover {
-      background: 0 rgba(255, 255, 255, 0.2);
+      background: 0 rgba(3, 3, 3, 0.2);
     }
   }
 
   &__duration {
     font-size: 110%;
     font-family: vars.$fheader;
-    color: vars.$tertiary;
+    color: vars.$primary;
     opacity: 0.6;
   }
 
@@ -41,7 +41,7 @@
     font-weight: 500;
     font-size: 95%;
     margin-bottom: 0.5em;
-    color:rgb(255, 255, 255, 0.5);
+    color:rgb(3, 3, 3, 0.5);
   }
 
   &__position {

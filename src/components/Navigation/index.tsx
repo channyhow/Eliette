@@ -40,12 +40,22 @@ function Navigation() {
         {/* Render Monstera conditionally based on screen size */}
         {!isMobile && hoveredIndex === 0 && (
         <Monstera
-          className="navigation__arrow navigation__arrow--visible"
+          className="navigation__monstera navigation__monstera--visible"
         />
         )}
-        <span className="navigation__text">Info</span>
+        <span className="navigation__label">Info</span>
       </NavLink>
-
+      <NavLink
+        to="/exp"
+        onMouseEnter={() => handleMouseEnter(3)}
+        onMouseLeave={handleMouseLeave}
+        className={`navigation__link ${hoveredIndex === 3 ? 'navigation__link--hovered' : ''}`}
+      >
+        {!isMobile && hoveredIndex === 3 && (
+        <Monstera className="navigation__monstera navigation__monstera--visible" />
+        )}
+        <span className="navigation__label">Experience</span>
+      </NavLink>
       <NavLink
         to="/projects"
         onMouseEnter={() => handleMouseEnter(1)}
@@ -55,22 +65,10 @@ function Navigation() {
         {/* Render Monstera conditionally based on screen size */}
         {!isMobile && hoveredIndex === 1 && (
         <Monstera
-          className="navigation__arrow navigation__arrow--visible"
+          className="navigation__monstera navigation__monstera--visible"
         />
         )}
-        <span className="navigation__text">Projects</span>
-      </NavLink>
-
-      <NavLink
-        to="/exp"
-        onMouseEnter={() => handleMouseEnter(3)}
-        onMouseLeave={handleMouseLeave}
-        className={`navigation__link ${hoveredIndex === 3 ? 'navigation__link--hovered' : ''}`}
-      >
-        {!isMobile && hoveredIndex === 3 && (
-        <Monstera className="navigation__arrow navigation__arrow--visible" />
-        )}
-        <span className="navigation__text">Experience</span>
+        <span className="navigation__label">Projects</span>
       </NavLink>
 
       <NavLink
@@ -82,10 +80,10 @@ function Navigation() {
         {/* Render Monstera conditionally based on screen size */}
         {!isMobile && hoveredIndex === 2 && (
         <Monstera
-          className="navigation__arrow navigation__arrow--visible"
+          className="navigation__monstera navigation__monstera--visible"
         />
         )}
-        <span className="navigation__text">Contact</span>
+        <span className="navigation__label">Contact</span>
       </NavLink>
 
     </nav>

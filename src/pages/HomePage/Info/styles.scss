@@ -1,77 +1,48 @@
-@use "./../../../styles/vars";
 .info {
-  width: 55%;
-  text-align: right;
-  margin-bottom: 2em;
+  padding: 2em 0 1em 0;
 
-  &__title {
-    padding: 0em 0em 1em 0em;
-    color: rgb(255, 255, 255, 0.5) ;
-  }
-
-  &__body {
-    padding: 1em 0;
-    font-size: 95%;
-  }
+p{
+  padding-top: 1em ;
 }
-
-@media only screen and (max-width: 767px) {
-  .info {
-    text-align: center;
-    width: fit-content;
-
-    &__title {
-      padding: 1.5em 0em 1em 0em;
-      font-size: 1.5em;
-    }
-  }
 }
+  // /* Extra small devices (phones, 600px and down) */
+  // @media only screen and (max-width: 600px) {
+  //     .info {
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    .info{
-      &__body {
-        font-size: 1em;
-      }
-      &__title {
-        font-size: 1.5em;
-      }
-  }
-  }
-  
-  // /* Large devices (laptops/desktops, 992px and up) */
-  // @media only screen and (min-width: 992px) {
-  //   .info{
-  //     &__body {
-
-  //     }
-  //     &__title {
-        
   //     }
   //   }
-  // }
-  
-//   //For Big TV's (HD Screens) 
-//   @media screen and (min-width: 1280px) {
-//     .info{
-//       &__body {
-// font-size: 110%;
-//       }
-//       &__title {
-//         font-size: 3em;
-//       }
-//     }
-//   }
-  
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
-  @media only screen and (min-width: 1920px) {
-    .info{
-      &__body {
-font-size: 110%;
-      }
-      &__title {
-        font-size: 2em;
+    
+  //   /* Small devices (portrait tablets and large phones, 600px and up) */
+  //   @media only screen and (min-width: 600px) {
+  //     .info {
+
+  //     }
+  //   }
+    
+  //   /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+      .info {
+
       }
     }
-  }
-  
+    
+    // /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+      .info {
+
+      }
+    }
+    
+      //For Big TV's (HD Screens)
+      @media screen and (min-width: 1280px) {
+          .info {
+   
+          }
+      }
+    
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1920px) {
+      .info {
+    
+      }
+    }

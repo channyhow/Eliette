@@ -1,0 +1,76 @@
+@use "./../../styles/vars";
+
+.topnav {
+  display: flex;
+  align-items: center;
+  padding: 1.5em 0 0 0;
+  position: sticky;
+  justify-content: space-between;
+  // width: 100%;
+
+.topnav__left,
+.topnav__link {
+  margin-right: 10px;   
+  background-color: vars.$background;
+}
+
+.topnav__link{
+  display: flex;
+  align-items: center;}
+
+.topnav__page {
+  font-family: vars.$fbody;
+  letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 2em 0.5em;
+    font-weight: 500;
+    background-color: vars.$background;
+
+}
+
+.topnav__monstera {
+  transform: scale(0.5); /* Correct the property name to 'transform' and use the 'scale' function */
+}
+
+}
+// /* Extra small devices (phones, 600px and down) */
+// @media only screen and (max-width: 600px) {
+//     .topnav {
+
+//     }
+//   }
+
+//   /* Small devices (portrait tablets and large phones, 600px and up) */
+//   @media only screen and (min-width: 600px) {
+//     .topnav {
+
+//     }
+//   }
+
+// //   /* Medium devices (landscape tablets, 768px and up) */
+//   @media only screen and (min-width: 768px) {
+//     .topnav {
+
+//     }
+//   }
+
+//   // /* Large devices (laptops/desktops, 992px and up) */
+//   @media only screen and (min-width: 992px) {
+//     .topnav {
+
+//     }
+//   }
+
+//     //For Big TV's (HD Screens)
+//     @media screen and (min-width: 1280px) {
+//         .topnav {
+
+//         }
+//     }
+
+//   /* Extra large devices (large laptops and desktops, 1200px and up) */
+//   @media only screen and (min-width: 1920px) {
+//     .topnav {
+
+//     }
+//   }

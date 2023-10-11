@@ -1,36 +1,27 @@
 import './app.scss';
 import {
   BrowserRouter, Route, Routes,
-  // useLocation,
+
 } from 'react-router-dom';
-// import { AnimatePresence } from 'framer-motion';
 import { useMediaQuery } from 'react-responsive';
 import IntroPage from './pages/IntroPage';
 import HomePage from './pages/HomePage';
-import Header from './components/Header';
-import Footer from './components/Footer';
 import Contact from './pages/Contact';
 import Experience from './pages/Experience';
 import Error from './pages/404';
 import Maintenance from './pages/maintenance';
-import Copyright from './components/Copyright';
-import Navigation from './components/Navigation';
+import TopNav from './components/TopNav';
+import BottomNav from './components/BottomNav';
 
 function App() {
   const isDesktop = useMediaQuery({ minWidth: 768 });
   const isMobile = useMediaQuery({ maxWidth: 767 });
-  // const location = useLocation();
 
   return (
     <div className="app">
       <BrowserRouter>
-        <section className="app__header">
-          <Header />
-          <Navigation />
-          <Footer />
-        </section>
-        <section className="app__body">
-          {/* <AnimatePresence> */}
+        <TopNav />
+        <section className="app__routes">
           <Routes>
             {/* Render IntroPage only on desktop */}
             {isDesktop && <Route path="/" element={<IntroPage />} />}
@@ -41,12 +32,10 @@ function App() {
             <Route path="/exp" element={<Experience />} />
             <Route path="*" element={<Error />} />
           </Routes>
-          <Copyright />
-          {/* </AnimatePresence> */}
+          {' '}
+          <BottomNav />
         </section>
-
       </BrowserRouter>
-      {/* {isMobile && scrolled && <BottomSocial />} */}
     </div>
   );
 }

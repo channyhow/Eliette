@@ -8,14 +8,15 @@ import EducationCard from './EducationCard';
 
 function ExperienceList() {
   return (
-    <div className="experience-list">
-      {' '}
-      <motion.main
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 3 }}
-      >
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 3 }}
+    >
+      <div className="experience-list">
+        {' '}
+        <h3 className="experience-list__title"> A little about me </h3>
         {' '}
         <p className="experience-list__intro">
           Born in Paris and raised in
@@ -48,17 +49,18 @@ function ExperienceList() {
           {' '}
           <span>web development.</span>
         </p>
-        <h2 className="experience-list__title">experience</h2>
+        <h3 className="experience-list__title">experience</h3>
 
         <div className="experience-container">
           <ExperienceCard experiences={experienceData} />
         </div>
-        <h2 className="experience-list__title">education</h2>
+        <h3 className="experience-list__title">education</h3>
         <div className="experience-list__container">
           <EducationCard education={educationData} />
         </div>
-      </motion.main>
-    </div>
+
+      </div>
+    </motion.main>
   );
 }
 

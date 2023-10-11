@@ -1,23 +1,64 @@
 @use './../../styles/vars';
 
-
 .footer {
-  text-align: center;
   display: flex;
-  justify-content: space-between;
-  align-items:last baseline;
-  flex:1;
-  &__title {
-    font-size: 1.5em;
-    color: vars.$primary;
+  padding: 1em 0 1em 0;
+
+  li {
+    margin-top: 1em;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: baseline;
+    color: rgb(255, 255, 255, 0.5);        
+    transition: opacity 0.5s ease-in-out;
+
+    &--hovered {
+      opacity:0.5;
+    }
   }
 }
+  
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+      .footer {
 
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 767px) {
-  .footer {
-margin-bottom: 1em;
   }
-}
+      }
+    
+    
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+      .footer {
 
+      }
+    }
+    
+  //   /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+      .footer {
+
+      }
+    }
+    
+    // /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+      .footer {
+ 
+      }
+    }
+    
+      //For Big TV's (HD Screens)
+      @media screen and (min-width: 1280px) {
+          .footer {
+   
+          }
+      }
+    
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1920px) {
+      .footer {
+    
+      }
+    }

@@ -1,108 +1,76 @@
 @use "./styles/vars";
 
-.app {
+.app {          
   display: flex;
+  flex-direction: column;
   height: 100vh; /* Ensure the app takes at least the full viewport height */
   overflow: hidden; // Hide overflow for the entire app
   justify-content: space-between;
-  background: linear-gradient(250deg, #c2a5b1, #8eb2be);
-    // background: linear-gradient(250deg, #259f47, #3302af);
-
-  background-size: 600% 600%;
-
-  -webkit-animation: Monstera 25s ease infinite;
-  -moz-animation: Monstera 20s ease infinite;
-  animation: Monstera 15s ease infinite;
-
-
-@-webkit-keyframes Monstera {
-  0%{background-position:0% 44%}
-  50%{background-position:100% 57%}
-  100%{background-position:0% 44%}
-}
-@-moz-keyframes Monstera {
-  0%{background-position:0% 44%}
-  50%{background-position:100% 57%}
-  100%{background-position:0% 44%}
-}
-@keyframes Monstera {
-  0%{background-position:0% 44%}
-  50%{background-position:100% 57%}
-  100%{background-position:0% 44%}
-}
-  &__header {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    // overflow-y: auto; // Add vertical scroll if necessary
-    // height: 100%; /* Set the height to 100% of the viewport height */
-    min-width: 30%;
-  }
-  &__body {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    overflow-y: auto; // Add vertical scroll if necessary
-    height: 100%; /* Set the height to 100% of the viewport height */
-    min-width: 30%;
+  font-size: 70%;
+  &__routes {
+    align-items: center;
+    justify-content: center;  
   }
 }
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .app {
-    flex-direction: column;
-    padding: 3em 2em 4em 2em;
-    overflow-y: unset;
-
-    &__header {
-      align-items: center;
-
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+      .app {
+          padding: 0em 2.6em 2.6em 2.6em;
+          overflow-y: unset;
+          &__header {
+            align-items: center;
+          }
+      }
     }
-    &__body {
-      align-items: center;
-      overflow-y:unset; 
+    
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+      .app {
+          padding: 3em 2em 4em 2em;
+          overflow-y: unset;
+          font-size: 80%;
+justify-content: center;
+      }
     }
-  }
-}
+    
+  //   /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+      .app {
+          padding: 3em 2em 1em 2em;
+          overflow-y: unset;
+          font-size: 80%;
+          &__routes{
+            padding: 0 2em;
+          }
+      }
+    }
+    
+    // /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+      .app {
+          padding: 3em 10em 2em 10em;
+          overflow-y: unset;
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  .app{
-    padding: 3em 2em 4em 2em;
-}
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .app{
-    padding: 2em 4em;
-}
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .app{
-    padding: 4em 4em;
-}
-}
-
-//For Big TV's (HD Screens) 
-@media screen and (min-width: 1280px) {
-  .app{
-    padding: 5em 5em;
-}
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1920px) {
-  .app{
-      padding: 15em 35em;
-  }
-}
-
-// //For 4K Displays (Ultra HD)
-//   @media screen and (min-width: 3840px) {
-
-// }
-
+      }
+    }
+    
+      //For Big TV's (HD Screens)
+      @media screen and (min-width: 1280px) {
+          .app {
+              padding: 3em 20em 1m 20em;
+              overflow-y: unset;
+          }
+      }
+    
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1920px) {
+      .app {
+          padding: 5em 40em 3em 40em;
+          overflow-y: unset;
+          font-size: 105%;
+          &__routes {
+            align-items: center;
+            justify-content: center;  
+          }
+      }
+    }

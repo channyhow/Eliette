@@ -1,0 +1,93 @@
+@use "./../../styles/vars";
+
+.bottom-section {
+  padding: 0 0 1em 0;
+  display: flex;
+  flex-direction: column;
+  // opacity: 0.2;
+  // z-index: -1;
+  position: sticky;
+  bottom: 0;
+  align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: vars.$background;
+
+  nav {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__link {
+    // padding: 1em 0;
+    letter-spacing: 2px;
+    padding: 2em 0.5em;
+    font-weight: 500;
+    transition: opacity 0.5s ease-in-out;
+
+    &--hovered {
+      font-style: italic;
+    }
+  }
+
+  &__text {
+    vertical-align: middle;
+    // padding-bottom: 2em;
+  }
+
+  &__monstera {
+    font-size: 1em;
+    vertical-align: middle;
+    opacity: 0;
+    /* Add a color for the arrow icon */
+    color: #030303;
+    transition: opacity 0.5s ease-in-out;
+
+    &--visible {
+      opacity: 0.5;
+    }
+  }
+}
+
+// /* Extra small devices (phones, 600px and down) */
+// @media only screen and (max-width: 600px) {
+//     .bottom-nav {
+
+//     }
+//   }
+
+// /* Small devices (portrait tablets and large phones, 600px and up) */
+// @media only screen and (min-width: 600px) {
+//   .bottom-nav {
+
+//   }
+// }
+
+//   /* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .bottom-nav {
+    width: 100%;
+
+  }
+}
+
+// // /* Large devices (laptops/desktops, 992px and up) */
+// @media only screen and (min-width: 992px) {
+//   .bottom-nav {
+
+//   }
+// }
+
+// //For Big TV's (HD Screens)
+// @media screen and (min-width: 1280px) {
+//   .bottom-nav {
+
+//   }
+// }
+
+// /* Extra large devices (large laptops and desktops, 1200px and up) */
+// @media only screen and (min-width: 1920px) {
+//   .bottom-nav {
+
+//   }
+// }

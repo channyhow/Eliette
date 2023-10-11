@@ -1,54 +1,152 @@
 @use "./../../styles/vars";
+
 .header {
   display: flex;
   flex-direction: column;
-  &__title {
-    font-size: 4em;
-  }
+  margin-top: 1em;
 
-  &__label {
-    margin: 1em;
-    color: vars.$tertiary;
+&__title {
+padding: 1em 0;
+letter-spacing: 0.5em;
+font-weight: 500;
   }
-&__fname {
-  opacity: 0.6;
-}
-&__name {
-  opacity: 0.8;
-}
-}
+  // &__navlink {
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+  // }
+  // &__fname {
+  // }
+  // &__name {
+
+  // }
+  // &__label {
+
+
+  // }
+
+}
   
-  .header {
-    &__navlink {
-      font-size: 90%;
-    }}
-}
+  // /* Extra small devices (phones, 600px and down) */
+  // @media only screen and (max-width: 600px) {
+  //     .header {
+  //      &__title {
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 767px) {
-  .header {
-    align-content: center;
-    text-align: center;
+  // }
+  // &__navlink {
 
-    &__title {
-      font-family: vars.$fheader;
-      // text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: 600;
-      width: max-content;
-      font-size: 4.5em;
-      box-sizing: border-box;
-    }
-    &__navlink {
-      display: flex;
-      align-items: center;
-    }
-    &__label {
-      font-size: 90%;
-      margin: 0.5em 0 1em 0;
-    }
-  }
-}
+  // }
+  // &__fname {
+
+  // }
+  // &__name {
+
+  // }
+  // &__label {
+    
+  // }
+  //     }
+  //   }
+    
+    // /* Small devices (portrait tablets and large phones, 600px and up) */
+    // @media only screen and (min-width: 600px) {
+    //   .header {
+    //     &__title {
+
+    //     }
+    //     &__navlink {
+      
+    //     }
+    //     &__fname {
+      
+    //     }
+    //     &__name {
+      
+    //     }
+    //     &__label {
+          
+    //     }
+    //   }
+    // }
+    
+  //   /* Medium devices (landscape tablets, 768px and up) */
+    // @media only screen and (min-width: 768px) {
+    //   .header {
+    //     &__title {
+
+    //     }
+    //     &__navlink {
+      
+    //     }
+    //     &__fname {
+      
+    //     }
+    //     &__name {
+      
+    //     }
+    //     &__label {
+          
+    //     }
+    //   }
+    // }
+    
+    // // /* Large devices (laptops/desktops, 992px and up) */
+    // @media only screen and (min-width: 992px) {
+    //   .header {
+    //     &__title {
+
+    //     }
+    //     &__navlink {
+      
+    //     }
+    //     &__fname {
+      
+    //     }
+    //     &__name {
+      
+    //     }
+    //     &__label {
+          
+    //     }
+    //   }
+    // }
+    
+    //   //For Big TV's (HD Screens)
+    //   @media screen and (min-width: 1280px) {
+    //       .header {
+    //         &__title {
+
+    //         }
+    //         &__navlink {
+          
+    //         }
+    //         &__fname {
+          
+    //         }
+    //         &__name {
+          
+    //         }
+    //         &__label {
+              
+    //         }
+    //       }
+    //   }
+    
+    // /* Extra large devices (large laptops and desktops, 1200px and up) */
+    // @media only screen and (min-width: 1920px) {
+    //   .header {
+    //     &__title {
+
+    //     }
+    //     &__navlink {
+      
+    //     }
+    //     &__fname {
+      
+    //     }
+    //     &__name {
+      
+    //     }
+    //     &__label {
+          
+    //     }
+    //   }
+    // }

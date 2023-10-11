@@ -1,41 +1,54 @@
 @use "./../../styles/vars";
 .copyright {
-  color: vars.$tertiary;
-  padding: 2em 0 1em 0;
-  font-size: 80%;
-  text-align: right;
+padding: 0 1.5em 0 1.5em;
+font-size: 70%;
+text-align: center;
+background-color: vars.$background;
 }
+  // /* Extra small devices (phones, 600px and down) */
+  // @media only screen and (max-width: 600px) {
+  //     .copyright {
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 767px) {
-  .copyright {
-    display: flex;
-    align-content: center;
-    text-align: center;
-    margin-top: 2em;
-    padding: 2em 0 1em 0;
-    flex-grow: 1;
-    font-size: 80%;
-  }
-}
+  //     }
+  //   }
+    
+  //   /* Small devices (portrait tablets and large phones, 600px and up) */
+  //   @media only screen and (min-width: 600px) {
+  //     .copyright {
 
-// /* Medium devices (landscape tablets, 768px and up) */
-// @media only screen and (min-width: 768px) {
-//   .copyright {
-//     flex-grow: 1;
-//     }
-// }
+  //     }
+  //   }
+    
+  //   /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+      .copyright {
+        bottom: 0;
+        padding-bottom: 1em;
 
-// /* Large devices (laptops/desktops, 992px and up) */
-// @media only screen and (min-width: 992px) {
-//   .copyright {
-//     flex-grow: 1;
-//     }
-// }
+        br {
+          display: none;
+        }
+      }
+    }
+    
+    // // /* Large devices (laptops/desktops, 992px and up) */
+    // @media only screen and (min-width: 992px) {
+    //   .copyright {
 
-// /* Extra large devices (large laptops and desktops, 1200px and up) */
-// @media only screen and (min-width: 1200px) {
-// .copyright {
-// flex-grow: 1;
-// }
-// }
+    //   }
+    // }
+    
+    //   //For Big TV's (HD Screens)
+    //   @media screen and (min-width: 1280px) {
+    //       .copyright {
+   
+    //       }
+    //   }
+    
+    // /* Extra large devices (large laptops and desktops, 1200px and up) */
+    // @media only screen and (min-width: 1920px) {
+    //   .copyright {
+    
+    //   }
+    // }
+

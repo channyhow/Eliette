@@ -1,11 +1,12 @@
 @use "./../../styles/vars";
- 
+
 .navigation {
-  padding-top: 2em;
+  padding: 1em 0;
   display: flex;
   flex-direction: column;
-  flex: 1;
-  color: rgb(255, 255, 255, 0.6);
+  font-family: "anton";
+  font-size: 4em;
+  line-height: 10px;
 
   &__link {
     font-weight: 600;
@@ -13,17 +14,16 @@
     transition: opacity 0.5s ease-in-out;
 
     &--hovered {
-      opacity:0.5;
+      font-style: italic;
     }
-}
+  }
 
   &__text {
     vertical-align: middle;
     padding-bottom: 2em;
-    font-family: vars.$ftitle;
   }
 
-  &__arrow {
+  &__monstera {
     font-size: 1em;
     vertical-align: middle;
     opacity: 0;
@@ -32,24 +32,118 @@
     transition: opacity 0.5s ease-in-out;
 
     &--visible {
-      opacity:0.5;
+      opacity: 0.5;
     }
   }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 767px) {
+// /* Extra small devices (phones, 600px and down) */
+// @media only screen and (max-width: 600px) {
+//     .navigation {
+//       &__link {
+//         &--hovered {
+  
+//         }
+//       }
+//       &__monstera {
+//       &--visible {
+  
+//       }
+//       }
+//       &__label {
+//       }
+//     }
+//   }
+
+// /* Small devices (portrait tablets and large phones, 600px and up) */
+// @media only screen and (min-width: 600px) {
+//   .navigation {
+//     &__link {
+//       &--hovered {
+
+//       }
+//     }
+//     &__monstera {
+//     &--visible {
+
+//     }
+//     }
+//     &__label {
+//     }
+//   }
+// }
+
+//   /* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
   .navigation {
-    padding-top: 1em;
-    flex-direction: row;
 
     &__link {
-      margin: 0em 0.2em 0em 0.2em;
-    }
+      &--hovered {
 
-    &__text {
-      text-transform: uppercase;
-      font-size: 90%;
+      }
+    }
+    &__monstera {
+    &--visible {
+
+    }
+    }
+    &__label {
+      font-size: 170%;
+      line-height: 20px;
+    }
+  }
+}
+
+// /* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .navigation {
+    &__link {
+      &--hovered {
+
+      }
+    }
+    &__monstera {
+    &--visible {
+
+    }
+    }
+    &__label {
+    }
+  }
+}
+
+//For Big TV's (HD Screens)
+@media screen and (min-width: 1280px) {
+  .navigation {
+    &__link {
+      &--hovered {
+
+      }
+    }
+    &__monstera {
+    &--visible {
+
+    }
+    }
+    &__label {
+    }
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1920px) {
+  .navigation {
+    &__link {
+      &--hovered {
+
+      }
+    }
+    &__monstera {
+    &--visible {
+
+    }
+    }
+    &__label {
     }
   }
 }

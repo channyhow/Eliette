@@ -5,24 +5,27 @@ import Pepette from '../../assets/sticker_16.png';
 
 function Maintenance() {
   return (
-    <div className="maintenance">
-      {' '}
-      <motion.main
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 3 }}
-      >
-        <h1>Oh no!</h1>
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 3 }}
+    >
+      <div className="maintenance">
         {' '}
-        <NavLink to="/home">
-          <img src={Pepette} alt="Pepe" className="pepette" />
-          {' '}
-        </NavLink>
+
+        <h3>Oh no!</h3>
+        {' '}
         <p>This area is still a work in progress!</p>
         <p>How about coming back later?</p>
-      </motion.main>
-    </div>
+        {' '}
+        <NavLink to="/home">
+          <img src={Pepette} alt="Pepe" className="maintenance__pepette" />
+          {' '}
+        </NavLink>
+
+      </div>
+    </motion.main>
   );
 }
 

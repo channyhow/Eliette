@@ -1,14 +1,11 @@
 @use "./../../styles/vars";
 
 .homepage {
-  margin: 2.5em 0 0 0;
-
   &__nav {
     display: flex;
     align-items: center;
     margin: 2.6em 0 0 0;
     justify-content: space-between;
-
   }
 
   &__monstera {
@@ -32,23 +29,14 @@ scale: 120%;
     //   /* Medium devices (landscape tablets, 768px and up) */
       @media only screen and (min-width: 768px) {
         .homepage {
-          
-display: flex;
-&__left-section {
-  margin-right: 2em;
-  max-width: 40%;
-}
-&__right-section {
-  margin-right: 4em;
-  max-width: 60%;
-}
+
         }
       }
       
       // /* Large devices (laptops/desktops, 992px and up) */
       @media only screen and (min-width: 992px) {
         .homepage {
-       
+
         }
       }
       
@@ -62,7 +50,8 @@ display: flex;
       /* Extra large devices (large laptops and desktops, 1200px and up) */
       @media only screen and (min-width: 1920px) {
         .homepage {
-      
+      align-items: baseline;
+      justify-content: center;
         }
       }
   
