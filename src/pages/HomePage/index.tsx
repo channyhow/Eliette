@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import Info from './Info';
 import './styles.scss';
-import Header from '../../components/Header';
 import Navigation from '../../components/Navigation';
 
 function HomePage() {
@@ -17,7 +16,6 @@ function HomePage() {
         {' '}
 
         <div className="homepage__left-section">
-          <Header />
           <Info />
 
         </div>
