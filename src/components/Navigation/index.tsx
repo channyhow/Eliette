@@ -16,7 +16,7 @@ function Navigation() {
   return (
     <nav className="navigation">
       <NavLink
-        to="/home"
+        to="/"
         onMouseEnter={() => handleMouseEnter(0)}
         onMouseLeave={handleMouseLeave}
         className={`navigation__link ${hoveredIndex === 0 ? 'navigation__link--hovered' : ''}`}

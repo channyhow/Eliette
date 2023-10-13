@@ -15,7 +15,7 @@ function Error() {
         <h3>Whoops</h3>
         <p>seems like this page doesn&apos;t exist!</p>
         <p>how about going home?</p>
-        <NavLink to="/home">
+        <NavLink to="/">
           <img src={Pepette} alt="Pepe" className="error__pepette" />
         </NavLink>
       </div>

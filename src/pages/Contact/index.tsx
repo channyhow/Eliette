@@ -13,7 +13,7 @@ function Contact() {
         exit={{ opacity: 0 }}
         transition={{ duration: 3 }}
       >
-        <h2 className="contact__title">contact</h2>
+        <h3 className="contact__title">contact</h3>
         <p>
           I love connecting with people in English, en français, 写中文也行.
         </p>

@@ -19,7 +19,7 @@ function Maintenance() {
         <p>This area is still a work in progress!</p>
         <p>How about coming back later?</p>
         {' '}
-        <NavLink to="/home">
+        <NavLink to="/">
           <img src={Pepette} alt="Pepe" className="maintenance__pepette" />
           {' '}
         </NavLink>

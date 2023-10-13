@@ -5,9 +5,8 @@ import Copyright from '../Copyright';
 
 function BottomNav() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  // const [isMobile, setIsMobile] = useState<boolean>(false);
   const location = useLocation();
-  const isHomepage = location.pathname === '/home';
+  const isHomepage = location.pathname === '/';
 
   const handleMouseEnter = (index: number) => {
     setHoveredIndex(index);
@@ -17,24 +16,6 @@ function BottomNav() {
     setHoveredIndex(null);
   };
 
-  // useEffect(() => {
-  //   const checkMobile = () => {
-  //     setIsMobile(window.innerWidth < 768); // Adjust the breakpoint as needed
-  //   };
-
-  //   checkMobile();
-
-  //   const resizeHandler = () => {
-  //     checkMobile();
-  //   };
-
-  //   window.addEventListener('resize', resizeHandler);
-
-  //   return () => {
-  //     window.removeEventListener('resize', resizeHandler);
-  //   };
-  // }, []);
-
   if (isHomepage) {
     return null; // Return null on homepage
   }
@@ -43,7 +24,7 @@ function BottomNav() {
     <div className="bottom-section">
       <nav className="bottom-section__nav">
         <NavLink
-          to="/home"
+          to="/"
           onMouseEnter={() => handleMouseEnter(0)}
           onMouseLeave={handleMouseLeave}
           className={`bottom-section__link ${

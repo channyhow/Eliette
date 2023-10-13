@@ -5,30 +5,6 @@ import Monstera from '../Icons/Monstera';
 import Socials from '../Socials';
 
 function TopNav() {
-  // const [hoveredIndex, setHoveredIndex] = useState(-1);
-  // // const [isMobile, setIsMobile] = useState<boolean>(false);
-
-  // const handleMouseEnter = (index: number) => {
-  //   setHoveredIndex(index);
-  // };
-
-  // const handleMouseLeave = () => {
-  //   setHoveredIndex(-1);
-  // };
-
-  // useEffect(() => {
-  //   const checkMobile = () => {
-  //     setIsMobile(window.innerWidth < 768); // Adjust the breakpoint as needed
-  //   };
-
-  //   checkMobile();
-
-  //   window.addEventListener('resize', checkMobile);
-  //   return () => {
-  //     window.removeEventListener('resize', checkMobile);
-  //   };
-  // }, []);
-
   type PageNameMap = {
     [key: string]: string;
   };

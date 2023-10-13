@@ -6,6 +6,7 @@
   height: 100vh; /* Ensure the app takes at least the full viewport height */
   overflow: hidden; // Hide overflow for the entire app
   font-size: 70%;
+  align-content: center;
   &__routes {
     display: flex;
     flex-grow: 1;
@@ -38,7 +39,7 @@
   //   /* Medium devices (landscape tablets, 768px and up) */
     @media only screen and (min-width: 768px) {
       .app {
-          padding: 3em 2em 1em 2em;
+          padding: 0 2em;
           overflow-y: unset;
           font-size: 80%;
           &__routes{
@@ -53,7 +54,7 @@
     // /* Large devices (laptops/desktops, 992px and up) */
     @media only screen and (min-width: 992px) {
       .app {
-          padding: 3em 10em 2em 10em;
+          padding: 2em 10em 2em 10em;
           overflow-y: unset;
 
       }
@@ -62,7 +63,7 @@
       //For Big TV's (HD Screens)
       @media screen and (min-width: 1280px) {
           .app {
-              padding: 3em 20em 1m 20em;
+              padding: 3em 20em 10em 20em;
               overflow-y: unset;
           }
       }
@@ -70,7 +71,7 @@
     /* Extra large devices (large laptops and desktops, 1200px and up) */
     @media only screen and (min-width: 1920px) {
       .app {
-          padding: 5em 40em 3em 40em;
+          padding: 10em 30em 3em 30em;
           overflow-y: unset;
           font-size: 105%;
           &__routes {
