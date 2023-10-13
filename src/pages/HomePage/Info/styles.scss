@@ -4,7 +4,20 @@
 p{
   padding-top: 1em ;
 }
+
+// header {
+//   display: flex;
+//   flex-direction: column;
+//   margin-top: 1em;
+
+&__title {
+padding: 1em 0;
+letter-spacing: 0.5em;
+font-weight: 500;
+  }
 }
+
+
   // /* Extra small devices (phones, 600px and down) */
   // @media only screen and (max-width: 600px) {
   //     .info {

@@ -12,17 +12,16 @@ h3 {
   p{
     padding-top: 1em ;
   }
+}
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+      .maintenance {
 a {
-  transform: scale(0.5);
+  transform: scale(0.4);
   flex: 1;
 }
-}
-  // /* Extra small devices (phones, 600px and down) */
-  // @media only screen and (max-width: 600px) {
-  //     .maintenance {
-
-  //     }
-  //   }
+      }
+    }
     
   //   /* Small devices (portrait tablets and large phones, 600px and up) */
   //   @media only screen and (min-width: 600px) {

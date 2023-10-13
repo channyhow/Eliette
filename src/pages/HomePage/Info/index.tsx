@@ -6,13 +6,13 @@ import './styles.scss';
 function Info() {
   return (
     <div className="info">
-      <h3 className="header__title">
-        <NavLink to="/home" className="header__navlink">
+      <h3 className="info__title">
+        <NavLink to="/home" className="info__navlink">
           channy
           how
         </NavLink>
       </h3>
-      <p className="header__label">Designer & front-end web developper</p>
+      <p className="info__label">Designer & front-end web developper</p>
       <p className="info__body">
         I am driven by the belief that design can inspire diversity and innovation, and I continue
         <span> to learn and grow.</span>
