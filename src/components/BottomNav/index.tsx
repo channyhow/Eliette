@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import './styles.scss';
 import Copyright from '../Copyright';
 
 function BottomNav() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const [isMobile, setIsMobile] = useState<boolean>(false);
+  // const [isMobile, setIsMobile] = useState<boolean>(false);
   const location = useLocation();
   const isHomepage = location.pathname === '/home';
 
@@ -17,31 +17,31 @@ function BottomNav() {
     setHoveredIndex(null);
   };
 
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768); // Adjust the breakpoint as needed
-    };
+  // useEffect(() => {
+  //   const checkMobile = () => {
+  //     setIsMobile(window.innerWidth < 768); // Adjust the breakpoint as needed
+  //   };
 
-    checkMobile();
+  //   checkMobile();
 
-    const resizeHandler = () => {
-      checkMobile();
-    };
+  //   const resizeHandler = () => {
+  //     checkMobile();
+  //   };
 
-    window.addEventListener('resize', resizeHandler);
+  //   window.addEventListener('resize', resizeHandler);
 
-    return () => {
-      window.removeEventListener('resize', resizeHandler);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('resize', resizeHandler);
+  //   };
+  // }, []);
 
-  if (isMobile && isHomepage) {
-    return null; // Return null if it's mobile and on the homepage
+  if (isHomepage) {
+    return null; // Return null on homepage
   }
 
   return (
     <div className="bottom-section">
-      <nav className={`bottom-section__nav ${isMobile && isHomepage ? 'hidden' : ''}`}>
+      <nav className="bottom-section__nav">
         <NavLink
           to="/home"
           onMouseEnter={() => handleMouseEnter(0)}

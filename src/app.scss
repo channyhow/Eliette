@@ -5,11 +5,11 @@
   flex-direction: column;
   height: 100vh; /* Ensure the app takes at least the full viewport height */
   overflow: hidden; // Hide overflow for the entire app
-  justify-content: space-between;
   font-size: 70%;
   &__routes {
+    display: flex;
+    flex-grow: 1;
     align-items: center;
-    justify-content: center;  
   }
 }
   /* Extra small devices (phones, 600px and down) */
@@ -20,6 +20,9 @@
           &__header {
             align-items: center;
           }
+          &__routes {
+        flex-direction: column;
+          }
       }
     }
     
@@ -29,7 +32,6 @@
           padding: 3em 2em 4em 2em;
           overflow-y: unset;
           font-size: 80%;
-justify-content: center;
       }
     }
     
@@ -40,7 +42,10 @@ justify-content: center;
           overflow-y: unset;
           font-size: 80%;
           &__routes{
+            flex-direction: column;
             padding: 0 2em;
+            // align-items: center;
+            justify-content: center;  
           }
       }
     }
@@ -71,6 +76,7 @@ justify-content: center;
           &__routes {
             align-items: center;
             justify-content: center;  
+            flex: 1;
           }
       }
     }

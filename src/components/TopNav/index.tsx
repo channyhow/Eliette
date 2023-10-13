@@ -34,6 +34,7 @@ function TopNav() {
   };
 
   const pageName: PageNameMap = {
+    '/': 'Bonjour!',
     '/home': 'Hey there!',
     '/exp': 'Work',
     '/projects': 'Projects',

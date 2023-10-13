@@ -32,15 +32,16 @@ scale: 120%;
     //   /* Medium devices (landscape tablets, 768px and up) */
       @media only screen and (min-width: 768px) {
         .homepage {
-          
 display: flex;
+align-items: center;
+justify-content: center;
 &__left-section {
-  margin-right: 2em;
+  margin: 0 1em;
   max-width: 40%;
 }
 &__right-section {
-  margin-right: 4em;
-  max-width: 60%;
+  margin: 0 1em;
+  // max-width: 60%;
 }
         }
       }

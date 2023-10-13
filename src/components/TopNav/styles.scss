@@ -10,21 +10,21 @@
 
 .topnav__left,
 .topnav__link {
-  margin-right: 10px;   
   background-color: vars.$background;
 }
 
 .topnav__link{
   display: flex;
-  align-items: center;}
+}
 
 .topnav__page {
   font-family: vars.$fbody;
   letter-spacing: 2px;
     text-transform: uppercase;
-    padding: 2em 0.5em;
+    padding: 2em 0 0 0;
     font-weight: 500;
     background-color: vars.$background;
+  align-items: center;
 
 }
 
