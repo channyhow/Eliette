@@ -12,12 +12,12 @@
 
 h1 {
   font-size: 3em; /* 40px/16=2.5em */
-  font-family: vars.$fheader;
+  font-family: 'Montserrat', sans-serif;
 }
 
 h2 {
   font-size: 2em; /* 30px/16=1.875em */
-  font-family: vars.$ftitle;
+  font-family: 'Montserrat', sans-serif;
   line-height: 1.5em;
   font-weight: 600;
   text-transform: uppercase;
@@ -25,18 +25,18 @@ h2 {
 
 h3 {
   font-size: 1.3em; /* 30px/16=1.875em */
-  font-family: vars.$fheader;
+  font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
 }
 
 h4 {
   font-size: 1em; /* 30px/16=1.875em */
-  font-family: vars.$fbody;
+  font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
 }
 
 p {
-  font-family: vars.$fbody;
+  font-family: 'Montserrat', sans-serif;
   line-height: 2em;
 }
 
@@ -58,7 +58,7 @@ body {
   padding: 0;
   height: 100vh;
   color: black;
-  background-color: vars.$background;
+  background-color: #ECE7E1;
   -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
