@@ -7,7 +7,7 @@ function Info() {
   return (
     <div className="info">
       <h3 className="info__title">
-        <NavLink to="/" className="info__navlink">
+        <NavLink to="/contact" className="info__navlink">
           channy
           how
         </NavLink>
