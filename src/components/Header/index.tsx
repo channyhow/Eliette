@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router-dom';
-import '../../styles/font.scss';
 import './styles.scss';
 
 function Header() {
