@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   font-family: 'Anton', sans-serif;;
-  font-size: 4em;
+  font-size: 5em;
   line-height: 10px;
   text-transform: uppercase;
 
@@ -38,39 +38,9 @@
   }
 }
 
-// /* Extra small devices (phones, 600px and down) */
-// @media only screen and (max-width: 600px) {
-//     .navigation {
-//       &__link {
-//         &--hovered {
-  
-//         }
-//       }
-//       &__monstera {
-//       &--visible {
-  
-//       }
-//       }
-//       &__label {
-//       }
-//     }
-//   }
-
 // /* Small devices (portrait tablets and large phones, 600px and up) */
 // @media only screen and (min-width: 600px) {
 //   .navigation {
-//     &__link {
-//       &--hovered {
-
-//       }
-//     }
-//     &__monstera {
-//     &--visible {
-
-//     }
-//     }
-//     &__label {
-//     }
 //   }
 // }
 
@@ -89,7 +59,7 @@
     // }
     // }
     &__label {
-      font-size: 170%;
+      font-size: 140%;
       line-height: 20px;
     }
   }
