@@ -3,7 +3,7 @@ import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import SmartphoneIcon from '@mui/icons-material/Smartphone';
 import GitHubIcon from '@mui/icons-material/GitHub';
-// import InstagramIcon from '@mui/icons-material/Instagram';
+import { SocialItem } from '../../@types';
 import './styles.scss';
 
 function Socials() {
@@ -17,19 +17,18 @@ function Socials() {
     setHoveredIndex(null);
   };
 
-  const socialIcons = [
-    { icon: <AlternateEmailIcon />, href: 'mailto:channyhow@gmail.com' },
-    // { icon: <InstagramIcon />, href: 'https://www.instagram.com/eliettenmissy/'},
-    { icon: <GitHubIcon />, href: 'https://github.com/channyhow' },
-    { icon: <LinkedInIcon />, href: 'https://www.linkedin.com/in/channy-how' },
-    { icon: <SmartphoneIcon />, href: 'tel:+33788484006' },
+  const socialIcons: SocialItem[] = [
+    { icon: <AlternateEmailIcon />, href: 'mailto:channyhow@gmail.com', label: 'email' },
+    { icon: <GitHubIcon />, href: 'https://github.com/channyhow', label: 'github' },
+    { icon: <LinkedInIcon />, href: 'https://www.linkedin.com/in/channy-how', label: 'linkedin' },
+    { icon: <SmartphoneIcon />, href: 'tel:+33788484006', label: 'phone' },
   ];
 
   return (
     <ol className="socials">
       {socialIcons.map((social) => (
         <li
-          key={social.href}
+          key={social.label}
           style={{ color: hoveredIndex === social.href ? '#DA231B' : '#030303' }}
           onMouseEnter={() => handleMouseEnter(social.href)}
           onMouseLeave={handleMouseLeave}
@@ -38,8 +37,9 @@ function Socials() {
             className={`socials__icon ${hoveredIndex === social.href ? 'socials__icon--hovered' : ''}`}
             href={social.href}
             target="_blank"
+            aria-label={social.label}
             rel="noopener noreferrer"
-            style={{ scale: '75%' }}
+            style={{ transform: 'scale(0.75)' }}
           >
             {social.icon}
           </a>

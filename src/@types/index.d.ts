@@ -19,3 +19,9 @@ export interface Experience {
   skills: string[];
   id:string
 }
+
+export interface SocialItem {
+  icon: JSX.Element;
+  href: string;
+  label: string;
+}
