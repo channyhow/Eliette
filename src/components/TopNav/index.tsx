@@ -32,7 +32,7 @@ function TopNav() {
         <div className="topnav__page">{getPageName(currentPath)}</div>
 
         <NavLink
-          to="/home"
+          to="/"
         >
           <Monstera className="topnav__monstera" width={48} height={48} />
         </NavLink>
