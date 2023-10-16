@@ -16,7 +16,6 @@
   }
 
   &__link {
-    // padding: 1em 0;
     letter-spacing: 2px;
     padding: 2em 0.5em;
     font-weight: 500;
@@ -30,7 +29,6 @@
 
   &__text {
     vertical-align: middle;
-    // padding-bottom: 2em;
   }
 
   &__monstera {
@@ -47,41 +45,13 @@
   }
 }
 
-// /* Extra small devices (phones, 600px and down) */
-// @media only screen and (max-width: 600px) {
-//     .bottom-nav {
-
-//     }
-//   }
-
-// /* Small devices (portrait tablets and large phones, 600px and up) */
-// @media only screen and (min-width: 600px) {
-//   .bottom-nav {
-
-//   }
-// }
-
-//   /* Medium devices (landscape tablets, 768px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .bottom-nav {
     width: 100%;
 
   }
 }
-
-// // /* Large devices (laptops/desktops, 992px and up) */
-// @media only screen and (min-width: 992px) {
-//   .bottom-nav {
-
-//   }
-// }
-
-// //For Big TV's (HD Screens)
-// @media screen and (min-width: 1280px) {
-//   .bottom-nav {
-
-//   }
-// }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1920px) {

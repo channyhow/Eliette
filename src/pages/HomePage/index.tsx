@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import Info from './Info';
 import './styles.scss';
 import Navigation from '../../components/Navigation';
+import Copyright from '../../components/Copyright';
 
 function HomePage() {
   return (
@@ -13,11 +14,8 @@ function HomePage() {
       className="home"
     >
       <div className="homepage">
-        {' '}
-
         <div className="homepage__left-section">
           <Info />
-
         </div>
         <div className="homepage__right-section" />
         <Navigation />

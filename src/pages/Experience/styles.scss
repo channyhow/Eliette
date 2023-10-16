@@ -23,33 +23,6 @@ justify-content: flex-start;
 }
 }
 
-
-
-// /* Extra small devices (phones, 600px and down) */
-// @media only screen and (max-width: 600px) {
-//   .experience-list {
-//     max-width: 95%;
-//     margin-bottom: 2em;
-//     margin: 6em 0 0 0;
-
-//     &__intro {
-//       font-size: 90%;
-//       padding: 1em 0 1em 0;
-//     }
-  
-//     &__title {
-//       text-align: left;    
-//       padding:  1em 0 1em 0;
-//       font-size: 1.5em;
-//     }
-  
-//     &__container {
-//   display: flex;
-//   justify-content: flex-start;  
-//   }
-// }
-// }
-
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .experience-list{

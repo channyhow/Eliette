@@ -19,7 +19,6 @@ function Error() {
           <img src={Pepette} alt="Pepe" className="error__pepette" />
         </NavLink>
       </div>
-
     </motion.main>
   );
 }

@@ -19,11 +19,8 @@ function Info() {
       </p>
       <p className="info__body">
         I work with
-        {' '}
         <span>React, JavaScript, TypeScript, HTML, CSS, SCSS,</span>
-        {' '}
         Node.js, and PostgreSQL.
-        {' '}
         <br />
         {/* I'm also proficient in Photoshop and Illustrator. */}
       </p>
