@@ -59,6 +59,9 @@ body {
   height: 100vh;
   color: black;
   background-color: vars.$background;
+  -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
 
 }
 
