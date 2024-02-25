@@ -1,0 +1,13 @@
+
+[
+  {
+    "id": "01",
+    "year": "2023",
+    "name": "Jean-Ludovic Albany | portfolio",
+    "description": "visual identity, web design",
+    "url": "https://jlalbany.netlify.app/",
+    "location":"",
+    "image": "https://jlalbany.netlify.app/assets/JL%20LOGO_150%20NOIR-70d9fa31.svg",
+    "skills": ["Javascript", "Typescript", "CSS3", "React", "Illustrator"]
+  }
+]

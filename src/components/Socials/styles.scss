@@ -1,18 +1,20 @@
-@use "./../../styles/vars";
+@use "./../../styles/vars" as v;
 
 .socials {
   display: flex;
-// justify-content: center;
-position: sticky;
-  &__icon {
-    display: flex;
-    align-items: baseline;
-    color: vars.$primary;
-    padding: 0em 0.5em;
-    transition: opacity 0.5s ease-in-out;
+  flex-direction: column;
+  justify-content: center;
+//   padding: 0;
+// margin: 0;  
 
-    &--hovered {
-      opacity: 0.5;
+//  for mobile
+  @media screen and (max-width: 1023px) {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    scale: 0.8;
+    a {
+padding: 0.5em;
     }
   }
 }

@@ -1,21 +1,19 @@
+import { NavLink } from 'react-router-dom';
 import './styles.scss';
 
 function Copyright() {
   return (
     <div className="copyright">
-      <p>
-        Coded with ♡ in
-        <span>Visual Studio Code</span>
-        .
-        <br />
-        Built in
-        <span>Vite.js</span>
-        and
-        <span>SCSS</span>
-        , deployed with
-        <span>Netlify</span>
-        .
-      </p>
+      <NavLink to="/contact">
+        {' '}
+        <p>
+          Coded with ♡ by
+          {' '}
+          {' '}
+
+          <span>Channy How</span>
+        </p>
+      </NavLink>
     </div>
   );
 }

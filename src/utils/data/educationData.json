@@ -1,0 +1,46 @@
+[
+  {
+    "id": "01",
+    "startYear": "2022",
+    "endYear": "2023",
+    "school": "Ecole O'Clock",
+    "degree": "Full stack Javascript developer training",
+    "description": "An intensive coding bootcamp focusing on full stack web development using JavaScript technologies including React, Node.js, Express, and PostgreSQL.",
+    "url": "", // Assuming there's no specific webpage for this education detail, otherwise, provide the URL.
+    "location": "Paris, IDF, France",
+    "image": "", // If there's an image representing this education, e.g., a logo or certificate, include its path or URL here.
+    "skills": [
+      "Javascript",
+      "Typescript",
+      "Express",
+      "CSS3",
+      "React",
+      "Node.JS",
+      "PostgreSQL"
+    ]
+  },
+  {
+    "id": "02",
+    "startYear": "2009",
+    "endYear": "2011",
+    "school": "Beijing Language and Culture University",
+    "degree": "Chinese Language Studies Associate degree",
+    "description": "A comprehensive program focused on mastering the Chinese language and understanding cultural nuances.",
+    "url": "", // Provide the URL if available.
+    "location": "Beijing, China",
+    "image": "", // Include a relevant image if applicable.
+    "skills": [] // No specific skills listed, which is fine for language studies.
+  },
+  {
+    "id": "03",
+    "startYear": "2005",
+    "endYear": "2008",
+    "school": "ISCOM",
+    "degree": "Marketing and Advertising",
+    "description": "Focused on modern marketing strategies, advertising principles, and the application of these concepts in business.",
+    "url": "", // Provide the URL if available.
+    "location": "Paris, IDF, France",
+    "image": "", // Include a relevant image if applicable.
+    "skills": [] // Skills could be added related to marketing and advertising tools or strategies learned.
+  }
+]

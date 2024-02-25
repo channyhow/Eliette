@@ -1,10 +1,8 @@
 @use "reset";
-@use "vars";
-@import 'normalize.css';
-
+@use "vars" as v;
+@import "normalize.css";
 
 /* Reset */
-
 
 * {
   margin: 0;
@@ -12,42 +10,57 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "against", serif;
+  src: local("against regular"),
+    url("././../font/against\ regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "vogue", serif;
+  src: local("vogue"), url("./../font/Vogue.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "vanilla", serif;
+  src: local("VanillaRavioli_Demo"),
+    url("./../font/VanillaRavioli_Demo.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 h1 {
-  font-size: 3em; /* 40px/16=2.5em */
-  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5em; /* 40px/16=2.5em */
+  font-family: 'Antonio';
+  // font-weight: 600;
 }
 
 h2 {
-  font-size: 2em; /* 30px/16=1.875em */
-  font-family: 'Montserrat', sans-serif;
+  font-size: 1.875em; /* 30px/16=1.875em */
   line-height: 1.5em;
-  font-weight: 600;
-  text-transform: uppercase;
+  // font-weight: 600;
 }
 
 h3 {
-  font-size: 1.3em; /* 30px/16=1.875em */
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
+  font-size: 1.5em; /* 30px/16=1.875em */
 }
 
 h4 {
-  font-size: 1em; /* 30px/16=1.875em */
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
+  font-size: 1.2em; /* 30px/16=1.875em */
 }
 
 p {
-  font-family: 'Montserrat', sans-serif;
-  line-height: 2em;
+  line-height: 1.5em;
+  font-size: 0.9em;
 }
 
 a {
   text-decoration: none;
 }
 
-ul,
-ol {
+ul, ol, li {
   list-style: none;
 }
 
@@ -56,22 +69,55 @@ span {
 }
 
 body {
-  font-size: 1em;
   margin: 0;
   padding: 0;
-  height: 100vh;
-  color: black;
-  background-color: #d6bdb7;
-  -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-
+  // height: 100vh;
+font-family: 'Inter'; 
+// background-color: #1a2052; // Apply background color to the body
+// color: #0d102c;
+background-color:  v.$secondary; // Apply background color to the body
+// color: #e0dbdb;
+@media screen and (max-width: 1023px) {
+  background-color:  v.$primary;
+  color:  v.$secondary 
+}
+}
+#root {
+  height: 100vh; // Ensure the root container covers the entire viewport height
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 html {
-  height: 100%;
+  // height: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.15;
 }
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+:hover {
+transition: 0.2s;
+}
+
+button {
+  background-color: transparent; // Set the background color to transparent
+  border: none; // Remove border to make it look like a text link
+  padding: 0; // Remove any padding
+  margin: 0; // Remove any margin
+  cursor:pointer; // Add cursor pointer to indicate interactivity
+
+  &:focus {
+    outline: none; // Remove default focus outline
+  }
+  &:hover h1 {
+    color: v.$tertiary; // Change color on hover
+  }
+
+  &:active h1 {
+    color: v.$tertiary; // Change color on click
+  }
 }

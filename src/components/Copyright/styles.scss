@@ -1,20 +1,23 @@
-@use "./../../styles/vars";
+@use "./../../styles/vars" as v;
+
 .copyright {
-padding: 0 1.5em 0 1.5em;
-font-size: 70%;
-text-align: center;
-background-color: #d6bdb7;
-}
-
-    /* Medium devices (landscape tablets, 768px and up) */
-    @media only screen and (min-width: 768px) {
-      .copyright {
-        bottom: 0;
-        padding-bottom: 1em;
-
-        br {
-          display: none;
-        }
-      }
+    display: flex;
+    justify-content: center;
+    white-space: nowrap; // Prevents text wrapping
+    transform: rotate(90deg); // Rotate 90 degrees to mirror Socials but in opposite direction if needed
+    width: 3em; // Ensures it takes full width available
+    color:v.$primary;
+    span:hover {
+color: v.$tertiary
     }
-    
+
+    // Adjust for mobile
+//     @media screen and (max-width: 1023px) {
+//       width: auto; // Adjust width based on content size
+//       position: fixed; // Use fixed to keep it in view
+//       bottom: 0; // Align at the bottom for mobile
+// padding-bottom: 1em;
+//       transform: rotate(0deg); // No rotation for mobile to maintain readability
+//     scale: 0.9;
+//     }
+  }

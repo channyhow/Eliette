@@ -1,0 +1,33 @@
+@use "./../../styles/vars" as v;
+
+.top {
+  display: flex;
+  color: v.$primary;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; // Ensure the .top component spans the full width of its container
+  padding: 0.5em; // Add some padding for spacing
+
+  h4 {
+    font-weight: 500;
+    margin: 0; // Remove margin to ensure alignment and spacing is controlled by flexbox
+    flex-grow: 1; // Allow the title to grow and use available space, centering it effectively
+    text-align: center; // Center the text for better visual alignment on all screen sizes
+  }
+
+  @media screen and (max-width: 1023px) {
+    // Adjustments for mobile screens
+    // flex-direction: column; 
+    // width:max-content ;
+    // Stack elements vertically on smaller screens
+    // justify-content: space-between; // Center items vertically
+    padding: 1em; // Increase padding for a more touch-friendly interface
+    color: v.$secondary;
+    h4 {
+      padding: 0.5em; // Adjust padding to ensure the text is not too close to the edges
+      // flex-grow: 0; 
+      // Reset flex-grow to avoid stretching the title on mobile
+    }
+  }
+}

@@ -1,50 +1,26 @@
-@use "./../../styles/vars";
+@use "./../../styles/vars" as v;
 
 .navigation {
-  padding: 1em 0;
   display: flex;
   flex-direction: column;
-  font-family: 'Anton', sans-serif;;
+  font-family: 'Antonio', sans-serif;
   font-size: 5em;
-  line-height: 10px;
   text-transform: uppercase;
 
-  &__link {
-    font-weight: 600;
-    padding-bottom: 1em;
-    transition: opacity 0.5s ease-in-out;
+  // Styles for non-home pages
+  // &--not-home {
+  //   font-size: 2em; // Smaller font size for non-home pages
+  //   flex-direction: row; // Change flex direction on non-home pages
+  //   justify-content: center; // Center navigation links horizontally
+  //   position: relative; // Adjust position if necessary
+  // }
+// @media screen and (max-width: 1023px) {
+//   // .navigation, .navigation--not-home {
+//     font-size: 2em; // Adjust font size for mobile
+//     flex-direction: column; // Keep column direction for mobile
+//   text-align: right;
+// padding: 1em;
 
-    &--hovered {
-      font-style: italic;
-    }
-  }
-
-  &__text {
-    vertical-align: middle;
-    padding-bottom: 2em;
-  }
-
-  &__monstera {
-    font-size: 1em;
-    vertical-align: middle;
-    opacity: 0;
-    /* Add a color for the arrow icon */
-    color: #030303;
-    transition: opacity 0.5s ease-in-out;
-
-    &--visible {
-      opacity: 0.5;
-    }
-  }
+// }
 }
 
-//   /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .navigation {
-
-    &__label {
-      font-size: 140%;
-      line-height: 20px;
-    }
-  }
-}

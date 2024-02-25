@@ -1,10 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './styles.scss';
-import experienceData from '../../data/experienceData.json';
-import educationData from '../../data/educationData.json';
-import ExperienceCard from './ExperienceCard';
-import EducationCard from './EducationCard';
+// import experienceData from '../../data/experienceData.json';
+// import educationData from '../../data/educationData.json';
 
 function ExperienceList() {
   return (
@@ -41,13 +39,13 @@ function ExperienceList() {
         </p>
         <h3 className="experience-list__title">experience</h3>
 
-        <div className="experience-container">
+        {/* <div className="experience-container">
           <ExperienceCard experiences={experienceData} />
         </div>
         <h3 className="experience-list__title">education</h3>
         <div className="experience-list__container">
           <EducationCard education={educationData} />
-        </div>
+        </div> */}
 
       </div>
     </motion.main>

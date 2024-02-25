@@ -1,0 +1,13 @@
+@use "./../../styles/vars" as v;
+.light-effect {
+  position: fixed; /* Use fixed to make it relative to the viewport */
+  border-radius: 50%;
+  width: 150px; /* Size of the light effect */
+  height: 150px; /* Size of the light effect */
+  background-color: #1129c274;
+  pointer-events: none; /* Ensure the light doesn't interfere with mouse events */
+  display: none; /* Initially hidden */
+  mix-blend-mode: screen; /* Blend mode for light effect */
+  transition: transform 0.2s ease; /* Smooth transition for the movement */
+
+}

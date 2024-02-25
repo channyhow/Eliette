@@ -1,36 +1,31 @@
+@use "./../../styles/vars" as v;
+
 .maintenance {
-text-align: center;
-display: flex;
-flex-direction: column;
-align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 
-h3 {
-  margin: 2.6em 0 0 0;
-}
-
-  p{
-    padding-top: 1em ;
-  }
-}
-  /* Extra small devices (phones, 600px and down) */
-  @media only screen and (max-width: 600px) {
-      .maintenance {
-a {
-  transform: scale(0.4);
-  flex: 1;
-}
-      }
+    h1 {
+        padding-bottom: 1em ;
     }
+    h4 {
+        padding-top: 0.5em;
+    }
+    &__link {
+        display: flex;
+        flex-direction: column;
+        gap: 1em; // Adds space between the text and the icon
+
+    &__back {
+        display: inline-flex; // Use inline-flex to align the ArrowBack icon correctly
+        padding: 0.5em; // Adjust padding as needed
     
-    
-  //   /* Medium devices (landscape tablets, 768px and up) */
-    @media only screen and (min-width: 768px) {
-      .maintenance {
-        margin: 0em 0 0 0;
-        a {
-          transform: scale(0.4);
-          flex: 1;
+        // Apply hover effect specifically to the icon's container
+        &:hover {
+          .MuiSvgIcon-root {
+            fill: #C6F700 !important; // Change icon color on hover
+          }
         }
       }
     }
-    
+}

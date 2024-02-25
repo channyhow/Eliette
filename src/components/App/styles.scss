@@ -1,0 +1,69 @@
+@use "./../../styles/vars" as v;
+
+.app {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center; // Center content vertically for laptop and tablet
+  overflow-y: hidden; // No vertical scroll on larger screens
+  align-items: center;
+  color: v.$primary;
+
+  &__outer-container {
+    display: flex;
+    align-items: center; // Vertically center children
+    height: 100vh;
+    max-width: 1000px; // Max width to ensure content does not stretch too wide on very large screens
+    color: v.$primary;
+    & > div {
+      margin: 0; // Remove margins that might be adding space
+    }
+  }
+
+  &__inner-container {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: 500px;
+    color: v.$secondary;
+  }
+
+  &__routes {
+    display: flex;
+    background-color: v.$primary;
+    height: 500px;
+    justify-content: center;
+    align-items: center; // Ensure content is vertically centered
+    margin: 1em 0;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .app {
+    flex-direction: column; // Stack children vertically
+    justify-content: flex-start; // Align content to the top
+    align-items: center;
+
+    &__outer-container {
+      padding: 0; // Remove horizontal padding for mobile
+      text-align: center; // Center text for mobile
+      flex-direction: column; // Corrected to stack children vertically for mobile
+
+    }
+
+    &__inner-container {
+    width: 100%;      overflow-y:auto; 
+    flex: 1;
+
+    }
+    &__routes {
+      display: flex;
+      flex: 1; // Take available space
+      background-color: v.$primary;
+      height: auto;
+      justify-content: center;
+      align-items: center; // Ensure content is vertically centered
+      margin: 1em 0;
+    }
+  }
+}
