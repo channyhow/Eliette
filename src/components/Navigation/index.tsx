@@ -19,7 +19,7 @@ function Navigation({ color, hoverColor }:{ color?: string; hoverColor?: string;
     // <nav className={`navigation ${!isHomePage ? 'navigation--not-home' : ''}`}>
     <nav className="navigation">
       <NavLink
-        to="/about"
+        to="/"
         onMouseEnter={() => handleMouseEnter(0)}
         onMouseLeave={handleMouseLeave}
         className={`navigation__link ${hoveredIndex === 0 ? 'navigation__link--hovered' : ''}`}
