@@ -11,24 +11,38 @@
 }
 
 @font-face {
-  font-family: "against", serif;
-  src: local("against regular"),
-    url("././../font/against\ regular.ttf") format("truetype");
+  font-family: 'Antonio';
+  src: url('/public/fonts/Antonio/static/Antonio-VariableFont_wght.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter Light 300';
+  src: url('/public/fonts/Inter/static/Inter-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: light;
+}
+
+@font-face {
+  font-family: 'Inter Regular 400';
+  src: url('/public/fonts/Inter/static/Inter-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EB Garamond';
+  src: url('/public/fonts/EB_Garamond/EBGaramond-VariableFont_wght.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
-  font-family: "vogue", serif;
-  src: local("vogue"), url("./../font/Vogue.ttf") format("truetype");
+  font-family: 'EB Garamond';
+  src: url('/public/fonts/EB_Garamond/EBGaramond-VariableFont_wght.ttf') format('truetype');
   font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "vanilla", serif;
-  src: local("VanillaRavioli_Demo"),
-    url("./../font/VanillaRavioli_Demo.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+  font-style: italic;
 }
 
 h1 {
