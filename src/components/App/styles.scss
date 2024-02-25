@@ -5,7 +5,7 @@
   width: 100vw;
   display: flex;
   justify-content: center; // Center content vertically for laptop and tablet
-  overflow-y: hidden; // No vertical scroll on larger screens
+  overflow-y: scroll; // No vertical scroll on larger screens
   align-items: center;
   color: v.$primary;
 
@@ -63,7 +63,7 @@
       height: auto;
       justify-content: center;
       align-items: center; // Ensure content is vertically centered
-      margin: 1em 0;
+      margin: 0;
     }
   }
 }

@@ -17,17 +17,11 @@
   }
 
   @media screen and (max-width: 1023px) {
-    // Adjustments for mobile screens
-    // flex-direction: column; 
-    // width:max-content ;
-    // Stack elements vertically on smaller screens
-    // justify-content: space-between; // Center items vertically
-    padding: 1em; // Increase padding for a more touch-friendly interface
+   padding: 1em 1em 0 1em; // Increase padding for a more touch-friendly interface
     color: v.$secondary;
     h4 {
       padding: 0.5em; // Adjust padding to ensure the text is not too close to the edges
-      // flex-grow: 0; 
-      // Reset flex-grow to avoid stretching the title on mobile
+    
     }
   }
 }
