@@ -38,45 +38,31 @@
   font-style: italic;
 }
 
-
 h1 {
-  font-size: 2.5em;
-  font-weight: 600; // Use font-weight as defined in @font-face
-  font-family: 'Antonio', sans-serif;
+  font-size: 2.5em; /* 40px/16=2.5em */
+  font-family: 'Antonio';
+  // font-weight: 600;
 }
 
 h2 {
-  font-size: 1.875em;
+  font-size: 1.875em; /* 30px/16=1.875em */
   line-height: 1.5em;
+  // font-weight: 600;
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.5em; /* 30px/16=1.875em */
 }
 
 h4 {
-  font-size: 1.2em;
+  font-size: 1.2em; /* 30px/16=1.875em */
 }
 
-p, span {
+p {
   line-height: 1.5em;
   font-size: 0.9em;
-  font-family: 'Inter', sans-serif;
 }
 
-span {
-  font-weight: 600;
-}
-
-/* Layout */
-#root {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Elements */
 a {
   text-decoration: none;
 }
@@ -85,20 +71,31 @@ ul, ol, li {
   list-style: none;
 }
 
-button {
-  background-color: transparent;
-  border: none;
-  padding: 0;
+span {
+  font-weight: 600;
+}
+
+body {
   margin: 0;
-  cursor: pointer;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+background-color:  v.$secondary; // Apply background color to the body
+@media screen and (max-width: 1023px) {
+  background-color:  v.$primary;
+  color:  v.$secondary 
+}
+}
+#root {
+  height: 100vh; // Ensure the root container covers the entire viewport height
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  &:focus {
-    outline: none;
-  }
-
-  &:hover, &:active {
-    color: v.$tertiary;
-  }
+html {
+  // height: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.15;
 }
 
 ::-webkit-scrollbar {
