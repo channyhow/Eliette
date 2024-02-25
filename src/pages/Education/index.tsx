@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './styles.scss';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
-import educationData from '../../data/educationData.json';
+// import educationData from '../../data/educationData.json';
 
 function EducationList() {
   // State to keep track of the currently hovered index
