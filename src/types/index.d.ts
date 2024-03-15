@@ -1,50 +1,42 @@
-export interface EducationProps {
+// Base interface for shared properties
+interface BaseProps {
   id: string;
   startYear: string;
   endYear: string;
-  school: string;
-  degree: string;
+  primaryText: string; // For school or company
+  secondaryText: string; // For degree or position
   description?: string;
   url?: string;
   location?: string;
-  image?:string;
+  image: {
+    src: string;
+    alt: string;
+  };
   skills?: string[];
 }
 
-export interface ExperienceProps {
-  id: string;
-  startYear: string;
-  endYear: string;
-  company: string;
-  position: string;
-  description?: string;
-  url?: string;
-  location?: string;
-  image?:string;
-  skills?: string[];
+// Specific interfaces extending the base one
+export interface EducationProps extends BaseProps {
+  primaryText: string; // Represents 'school'
+  secondaryText: string; // Represents 'degree'
 }
 
-
-export interface CommonCardData {
-  id: string;
-  primaryText: string; // previously 'title'
-  secondaryText?: string; // previously 'subtitle' and optional
-  description?: string;
-  url?: string;
-  location?: string;
-  image?: string;
-  skills?: string[];
+export interface ExperienceProps extends BaseProps {
+  primaryText: string; // Represents 'company'
+  secondaryText: string; // Represents 'position'
 }
 
-// Assuming PortfolioItem is similar to this:
+// Assuming PortfolioItem needs to adhere to a similar structure but might have unique properties
 export interface PortfolioItem {
   id: string;
   year: string;
   name: string;
-  description?: string;
-  url?: string;
-  image?: string;
-  skills?: string[];
+  description: string;
+  url: string;
+  location?: string; // Added as optional if you have items without location
+  image: ImageMapProps[];
+  skills: string[];
+  // category: string;
 }
 
 export interface SocialItem {
@@ -53,9 +45,22 @@ export interface SocialItem {
   label: string;
 }
 
-export type ConvertedData = CommonCardData;
+// Since CommonCardData aims to unify the data structure,
+// ensure it's flexible or extendable as needed
+export type CommonCardData = BaseProps;
 
 export interface CardProps {
-  // data: data[]
-  data: ConvertedData[];
+  data: PortfolioItem[]
+}
+
+export interface ImageListProps {
+  data: ImageProps[]
+}
+
+export interface ImageProps {
+  src: string;
+  alt: string;
+  author?: string;
+  rows?:number;
+  cols?:number;
 }

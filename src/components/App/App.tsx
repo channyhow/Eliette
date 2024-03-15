@@ -12,6 +12,7 @@ import Copyright from '../Copyright';
 // import MouseLight from '../MouseLight';
 import Top from '../Top';
 import Maintenance from '../../pages/maintenance';
+import Projects from '../../pages/Projects';
 
 function App() {
   const isMobile = useMediaQuery('(max-width: 1023px)');
@@ -32,8 +33,8 @@ function App() {
             <Route path="/" element={<Info />} />
             <Route path="/about" element={<Maintenance />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/projects" element={<Maintenance />} />
-            <Route path="/exp" element={<Experience />} />
+            <Route path="/projects" element={<Projects />} />
+            {/* <Route path="/exp" element={<Experience />} /> */}
             <Route path="*" element={<Error />} />
           </Routes>
         </motion.div>
@@ -43,6 +44,8 @@ function App() {
       {
   isMobile && (
     <div style={{
+      // position:'fixed',
+      // bottom:'0',
       display: 'flex',
       justifyContent: 'center',
       padding: '1em',

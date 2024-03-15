@@ -5,35 +5,35 @@
 /* Font Face Declarations */
 @font-face {
   font-family: 'Antonio';
-  src: url('/public/fonts/Antonio/static/Antonio-SemiBold.ttf') format('truetype');
+  src: url('/fonts/Antonio/static/Antonio-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Inter';
-  src: url('/public/fonts/Inter/static/Inter-Light.ttf') format('truetype');
+  src: url('/fonts/Inter/static/Inter-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Inter';
-  src: url('/public/fonts/Inter/static/Inter-Regular.ttf') format('truetype');
+  src: url('/fonts/Inter/static/Inter-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'EB Garamond';
-  src: url('/public/fonts/EB_Garamond/EBGaramond-VariableFont_wght.ttf') format('truetype');
+  src: url('/fonts/EB_Garamond/EBGaramond-VariableFont_wght.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'EB Garamond';
-  src: url('/public/fonts/EB_Garamond/EBGaramond-VariableFont_wght.ttf') format('truetype');
+  src: url('/fonts/EB_Garamond/EBGaramond-VariableFont_wght.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
 }
@@ -41,21 +41,29 @@
 h1 {
   font-size: 2.5em; /* 40px/16=2.5em */
   font-family: 'Antonio';
-  // font-weight: 600;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 h2 {
   font-size: 1.875em; /* 30px/16=1.875em */
   line-height: 1.5em;
-  // font-weight: 600;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 h3 {
   font-size: 1.5em; /* 30px/16=1.875em */
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+
 }
 
 h4 {
   font-size: 1.2em; /* 30px/16=1.875em */
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+h5 {
+  font-size: 1em; /* 30px/16=1.875em */
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 p {

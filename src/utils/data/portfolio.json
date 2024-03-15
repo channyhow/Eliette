@@ -1,13 +1,108 @@
-
 [
   {
     "id": "01",
-    "year": "2023",
+    "year": "2024",
     "name": "Jean-Ludovic Albany | portfolio",
     "description": "visual identity, web design",
     "url": "https://jlalbany.netlify.app/",
-    "location":"",
-    "image": "https://jlalbany.netlify.app/assets/JL%20LOGO_150%20NOIR-70d9fa31.svg",
+    "location": "",
+    "image": [
+      {
+        "src": "jlalbany1",
+        "alt": "Laptop version",
+        "author": "",
+        "rows": 2,
+        "cols": 3 
+      },
+      {
+        "src": "jlalbany2",
+        "alt": "Mobile version",
+        "author": "",
+        "rows": 3, 
+        "cols": 2
+      },
+      {
+        "src": "jlalbany3",
+        "alt": "jlalbany3",
+        "author": "",
+        "rows": 1,
+        "cols": 1 
+      },
+      {
+        "src": "jlalbany4",
+        "alt": "jlalbany4",
+        "author": "",
+        "rows": 1,
+        "cols": 1 
+      },
+      {
+        "src": "jlalbany5",
+        "alt": "jlalbany5",
+        "author": "",
+        "rows": 1,
+        "cols": 1 
+      },
+      {
+        "src": "jlalbany6",
+        "alt": "jlalbany6",
+        "author": "",
+        "rows": 1,
+        "cols": 1 
+      }
+    ],
+    "skills": ["Javascript", "Typescript", "CSS3", "React", "Illustrator"]
+  },
+  {
+    "id": "02",
+    "year": "2024",
+    "name": "SashaYogaFlow.com",
+    "description": "visual identity, web design",
+    "url": "https://sashayogaflow.netlify.app/",
+    "location": "",
+    "image": [
+      {
+        "src": "sashayogaflow1",
+        "alt": "Laptop version",
+        "author": "",
+       "rows": 1,
+        " cols": ""
+      },
+      {
+        "src": "sashayogaflow2",
+        "alt": "Mobile version",
+        "author": "",
+       "rows": 1,
+         "cols": 1
+      },
+      {
+        "src": "sashayogaflow3",
+        "alt": "SashaYogaFlow",
+        "author": "",
+       "rows": 1,
+         "cols": 1
+      },
+      {
+        "src": "sashayogaflow4",
+        "alt": "SashaYogaFlow",
+        "author": "",
+       "rows": 1,
+         "cols": 1
+      },
+      {
+        "src": "sashayogaflow5",
+        "alt": "SashaYogaFlow",
+        "author": "",
+       "rows": 1,
+         "cols": 1
+      },
+      {
+        "src": "sashayogaflow6",
+        "alt": "SashaYogaFlow",
+        "author": "",
+        "rows": 1,
+        "cols": 1
+      }
+    ],
     "skills": ["Javascript", "Typescript", "CSS3", "React", "Illustrator"]
   }
 ]

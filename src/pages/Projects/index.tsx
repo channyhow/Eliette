@@ -1,13 +1,21 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './styles.scss';
-import Card from '../../components/Card';
-import portfolio from '../../utils/data/portfolio.json';
-import { convertPortfolioToCommonData } from '../../utils/dataConversion';
-import Maintenance from '../maintenance';
-
+import QuiltedImageList from '../../components/ImageList';
+import { JLALBANY_IMAGE_MAP, SASHAYOGAFLOW_IMAGE_MAP } from '../../utils/imageMap';
+import Cards from '../../components/Card';
+import portfolio from './../../utils/data/portfolio.json';
 function Projects() {
-  // const portfolioData = convertPortfolioToCommonData(portfolio);
+  // Combine and transform the image maps into the required array format
+  const combinedImageData = [
+    ...Object.values(JLALBANY_IMAGE_MAP),
+    ...Object.values(SASHAYOGAFLOW_IMAGE_MAP),
+  ].map((image) => ({
+    src: image.src,
+    alt: image.alt,
+    cols: image.cols || 1, // Default to 1 if not specified
+    rows: image.rows || 1, // Default to 1 if not specified
+  }));
 
   return (
     <motion.div
@@ -16,8 +24,8 @@ function Projects() {
       transition={{ duration: 0.5 }}
       className="projects"
     >
-      <Maintenance />
-      {/* <Card data={portfolioData} /> */}
+      <Cards data={portfolio}/>
+      {/* <QuiltedImageList data={combinedImageData} /> */}
     </motion.div>
   );
 }

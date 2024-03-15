@@ -1,0 +1,57 @@
+@use "./../../styles/vars";
+
+.homepage {
+  &__nav {
+    display: flex;
+    align-items: center;
+    margin: 2.6em 0 0 0;
+    justify-content: space-between;
+
+  }
+
+  &__monstera {
+scale: 120%;
+  }
+  }
+    // /* Extra small devices (phones, 600px and down) */
+    // @media only screen and (max-width: 600px) {
+    //     .homepage {
+
+    //     }
+    //   }
+      
+    //   /* Small devices (portrait tablets and large phones, 600px and up) */
+    //   @media only screen and (min-width: 600px) {
+    //     .homepage {
+
+    //     }
+    //   }
+      
+    //   /* Medium devices (landscape tablets, 768px and up) */
+      @media only screen and (min-width: 768px) {
+        .homepage {
+
+        }
+      }
+      
+      // /* Large devices (laptops/desktops, 992px and up) */
+      @media only screen and (min-width: 992px) {
+        .homepage {
+
+        }
+      }
+      
+        //For Big TV's (HD Screens)
+        @media screen and (min-width: 1280px) {
+            .homepage {
+     
+            }
+        }
+      
+      /* Extra large devices (large laptops and desktops, 1200px and up) */
+      @media only screen and (min-width: 1920px) {
+        .homepage {
+      
+        }
+      }
+  

@@ -30,10 +30,10 @@ function ContactForm() {
     try {
       if (form.current) {
         await emailjs.sendForm(
-          'your_service_id',
-          'your_template_id',
+          'service_hgkesjn',
+          'template_xsgu35l',
           form.current,
-          'your_user_id',
+          'O8_eni2QDzWuo6roS',
         );
         setIsSuccess(true);
         form.current.reset();
