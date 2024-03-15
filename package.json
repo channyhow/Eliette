@@ -1,5 +1,5 @@
 {
-  "name": "monsteralover",
+  "name": "channyh",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -20,14 +20,11 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.15.0",
-    "react-slick": "^0.30.2",
-    "slick-carousel": "^1.8.1",
     "vite": "^4.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
-    "@types/react-slick": "^0.23.13",
     "@typescript-eslint/eslint-plugin": "^5.56.0",
     "@typescript-eslint/parser": "^5.56.0",
     "eslint": "^8.36.0",
@@ -43,5 +40,13 @@
   "main": "index.js",
   "author": "channyh",
   "license": "MIT",
-  "repository": "https://github.com/channyhow/Eliette.git"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/channyhow/Eliette.git"
+  },
+  "description": "Hi I'm Channy and this is my first portfolio.\r Demo right there:\r <https://channyhow.com/>",
+  "bugs": {
+    "url": "https://github.com/channyhow/Eliette/issues"
+  },
+  "homepage": "https://github.com/channyhow/Eliette#readme"
 }
