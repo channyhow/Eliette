@@ -6,6 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'; import { KeyboardArrowRight, KeyboardArrowLeft } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
+import { useMediaQuery } from '@mui/material';
 import {
   JLALBANY_IMAGE_MAP, SASHAYOGAFLOW_IMAGE_MAP, JLALBANY_LOGO_MAP, SASHAYOGAFLOW_LOGO_MAP,
 } from '../../utils/imageMap';
@@ -15,6 +16,7 @@ function Cards({ data }: CardProps) {
   const [open, setOpen] = useState(false);
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const activeItem = data[activeItemIndex];
+  const isMobile = useMediaQuery('(max-width:1023px)');
 
   // Decide which image and logo map to use
   const activeImageMap = activeItem?.id === '01' ? JLALBANY_IMAGE_MAP : SASHAYOGAFLOW_IMAGE_MAP;
@@ -45,8 +47,7 @@ function Cards({ data }: CardProps) {
           </Button>
         </div>
         <div style={{
-          display: 'flex', justifyContent: 'center', alignItems: 'center',
-          // backgroundColor: 'rgba(255,255,255,0.1)',
+          display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: isMobile ? 'column' : 'row', scale: isMobile ? '0.9' : '',
         }}
         >
           {activeLogoMap && (
@@ -58,7 +59,7 @@ function Cards({ data }: CardProps) {
                 height: '200px',
                 display: 'flex',
                 margin: 'auto',
-                padding: '1em',
+                padding: isMobile ? '' : '1em',
                 zIndex: '10',
                 filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))', // Add drop shadow
                 // borderRadius: '1em',
@@ -71,7 +72,7 @@ function Cards({ data }: CardProps) {
           <Box sx={{
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'flex-start',
+            alignItems: isMobile ? 'center' : 'flex-start',
             height: '300px',
             justifyContent: 'center',
             zIndex: '10',
@@ -104,6 +105,7 @@ function Cards({ data }: CardProps) {
                       backgroundColor: 'rgba(255,255,255,0.1)', // Change to desired hover background color
                       cursor: 'pointer', // Changes the cursor to indicate the item is interactive
                     },
+                    flexWrap: 'wrap',
                   }}
                 >
                   <p style={{
