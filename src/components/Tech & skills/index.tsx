@@ -12,12 +12,11 @@ import ExpressIcon from '../Icons/Express';
 import PostgreSQLIcon from '../Icons/PostgreSQL';
 import ShopifyIcon from '../Icons/Shopify';
 import TypescriptIcon from '../Icons/TS';
-import Monstera from '../Icons/Monstera';
 
 function Tech() {
   // State to keep track of the currently hovered index
   const [hoveredIndex, setHoveredIndex] = useState(-1);
-  const [isMobile, setIsMobile] = useState<boolean>(false);
+  // const [isMobile, setIsMobile] = useState<boolean>(false);
 
   // Function to handle mouse enter event
   const handleMouseEnter = (index:number) => {
@@ -49,9 +48,9 @@ function Tech() {
         className={`tech__link ${hoveredIndex === 1 ? 'tech__link--hovered' : ''}`}
       >
         <span className="tech__link-text">Tech & Skills</span>
-        {!isMobile && hoveredIndex === 1 && (
+        {/* {!isMobile && hoveredIndex === 1 && (
         <Monstera className="tech__monstera" />
-        )}
+        )} */}
 
       </div>
       {/* Conditionally render the sublinks (icons) if hoveredIndex is 1 */}

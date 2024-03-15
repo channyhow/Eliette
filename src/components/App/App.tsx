@@ -3,7 +3,6 @@ import { Route, Routes } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useMediaQuery } from '@mui/material';
 import Contact from '../../pages/Contact';
-import Experience from '../../pages/Experience';
 import Error from '../../pages/404';
 
 import Socials from '../Socials';
