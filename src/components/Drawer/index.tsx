@@ -66,7 +66,7 @@ export default function SwipeableTemporaryDrawer() {
         </div>
         <div style={{ padding: '1em 0' }}>
           {' '}
-          <Socials color="#ece3e3" hoverColor="#C6F700" />
+          <Socials color="#ece3e3" hoverColor="#C6F700" backgroundColor="" />
         </div>
       </Box>
     </SwipeableDrawer>

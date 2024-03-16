@@ -6,7 +6,7 @@ function Footer() {
 
   return (
     <div className="footer">
-      <Socials />
+      <Socials hoverColor="" color="" backgroundColor="" />
     </div>
   );
 }
