@@ -81,14 +81,14 @@ function Cards({ data }: CardProps) {
           >
             <Button onClick={handleOpen} sx={{ margin: 1 }}>
               <h3 style={{
-                fontFamily: 'Antonio', color: 'white', textTransform: 'uppercase', whiteSpace: 'nowrap', fontWeight: 'bold', letterSpacing: '5px', filter: 'drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3))',
+                fontFamily: 'Antonio', color: 'white', textTransform: 'uppercase', fontWeight: 'bold', letterSpacing: '5px', filter: 'drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3))',
 
               }}
               >
                 {activeItem.name}
               </h3>
             </Button>
-            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', flexWrap:'wrap' }}>
               {activeItem.skills.map((skill) => (
                 <Box
                   key={skill}

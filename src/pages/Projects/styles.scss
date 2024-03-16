@@ -4,4 +4,8 @@
     width: 100%;
     height: 100%;
     padding: 1.5em;
+    /* Media query for mobile devices */
+@media (max-width: 768px) { /* Adjust this value based on your definition of mobile devices */
+        padding: 0;
+    }
 }

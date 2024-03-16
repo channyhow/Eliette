@@ -9,11 +9,15 @@
     padding: 2em;
     flex: 1;
     height: max-content;
+    @media (max-width: 768px) { /* Adjust this value based on your definition of mobile devices */
+    padding: 1em;
+}
   }
 
   &__left {
     text-align: right;
   }
+  
 
   p {
     padding: 0.5em 0;
