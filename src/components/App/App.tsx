@@ -18,7 +18,7 @@ function App() {
 
   return (
     <motion.div className="app">
-      {!isMobile && <Socials color="#1129c2" hoverColor="#C6F700" />}
+      {!isMobile && <Socials color="#1129c2" hoverColor="#C6F700" backgroundColor={''} />}
 
       <div className="app__inner-container">
         <Top />
@@ -51,7 +51,7 @@ function App() {
       width: '100%',
     }}
     >
-      <Socials color="#ece3e3" hoverColor="#C6F700" />
+      <Socials color="#ece3e3" hoverColor="#C6F700" backgroundColor={''} />
     </div>
   )
 }

@@ -1,45 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useMediaQuery } from '@mui/material';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
-import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import SmartphoneIcon from '@mui/icons-material/Smartphone';
-import MonsteraBlue from '../Icons/MonsteraBlue';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import './styles.scss';
 import MonsteraNude from '../Icons/MonsteraNude';
-// Import your Monstera icons and any other necessary components
-
-// interface SocialIcon {
-//   icon: JSX.Element;
-//   href: string;
-//   label: string;
-// }
+import MonsteraBlue from '../Icons/MonsteraBlue';
 
 interface SocialsProps {
-  isMobile: boolean;
-  handleMouseEnter: (href: string) => void;
-  handleMouseLeave: () => void;
-  hoveredIndex: string | null;
+  // isMobile: boolean;
+  // handleMouseEnter: (href: string) => void;
+  // handleMouseLeave: () => void;
+  // hoveredIndex: string | null;
   hoverColor: string;
   color: string;
   backgroundColor: string;
 }
 
-function Socials({
-  isMobile, handleMouseEnter, handleMouseLeave, hoveredIndex, hoverColor, color, backgroundColor,
-}: SocialsProps) {
+function Socials({ color, hoverColor, backgroundColor }:
+SocialsProps) {
+  const [hoveredIndex, setHoveredIndex] = useState<string | null>(null);
+  const isMobile = useMediaQuery('(max-width:1023px)');
+
+  const handleMouseEnter = (href: string) => {
+    setHoveredIndex(href);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
+  };
+
   const socialIcons = [
-    { icon: <AlternateEmailIcon />, href: 'mailto:channyhow@gmail.com', label: 'Email' },
-    { icon: <GitHubIcon />, href: 'https://github.com/channyhow', label: 'GitHub' },
-    { icon: <LinkedInIcon />, href: 'https://www.linkedin.com/in/channy-how', label: 'LinkedIn' },
-    { icon: <SmartphoneIcon />, href: 'tel:+33788484006', label: 'Phone' },
+    { icon: <AlternateEmailIcon />, href: 'mailto:channyhow@gmail.com', label: 'email' },
+    { icon: <GitHubIcon />, href: 'https://github.com/channyhow', label: 'github' },
+    { icon: <LinkedInIcon />, href: 'https://www.linkedin.com/in/channy-how', label: 'linkedin' },
+    { icon: <SmartphoneIcon />, href: 'tel:+33788484006', label: 'phone' },
     {
       icon: isMobile ? <MonsteraNude width="24" height="24" /> : <MonsteraBlue width="24" height="24" />,
       href: '/contact',
-      label: 'Contact',
+      label: 'contact',
     },
   ];
 
   return (
-    <ul className="socials">
+    <div className="socials">
       {socialIcons.map((social) => (
         <li
           key={social.href}
@@ -63,7 +68,7 @@ function Socials({
           </a>
         </li>
       ))}
-    </ul>
+    </div>
   );
 }
 
