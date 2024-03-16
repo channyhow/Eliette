@@ -7,7 +7,25 @@ import MonsteraBlue from '../Icons/MonsteraBlue';
 import MonsteraNude from '../Icons/MonsteraNude';
 // Import your Monstera icons and any other necessary components
 
-function Socials({ isMobile, handleMouseEnter, handleMouseLeave, hoveredIndex, hoverColor, color, backgroundColor }) {
+// interface SocialIcon {
+//   icon: JSX.Element;
+//   href: string;
+//   label: string;
+// }
+
+interface SocialsProps {
+  isMobile: boolean;
+  handleMouseEnter: (href: string) => void;
+  handleMouseLeave: () => void;
+  hoveredIndex: string | null;
+  hoverColor: string;
+  color: string;
+  backgroundColor: string;
+}
+
+function Socials({
+  isMobile, handleMouseEnter, handleMouseLeave, hoveredIndex, hoverColor, color, backgroundColor,
+}: SocialsProps) {
   const socialIcons = [
     { icon: <AlternateEmailIcon />, href: 'mailto:channyhow@gmail.com', label: 'Email' },
     { icon: <GitHubIcon />, href: 'https://github.com/channyhow', label: 'GitHub' },
