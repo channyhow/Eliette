@@ -7,7 +7,8 @@
 //   padding: 0;
 // margin: 0;  
 a:focus {
-  outline: 2px solid blue; /* Example: Adds a blue outline around focused links */
+  // outline: 2px solid blue; /* Example: Adds a blue outline around focused links */
+color: v.$tertiary;
 }
 //  for mobile
   @media screen and (max-width: 1023px) {
