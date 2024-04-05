@@ -1,10 +1,10 @@
 // Using ES6 imports
-import jlalbany1 from '../assets/exp/jlalbany/jlabany1.png';
-import jlalbany2 from '../assets/exp/jlalbany/jlabany2.png';
-import jlalbany3 from '../assets/exp/jlalbany/JL_FOND ROSE CLAIR NOIR.svg';
-import jlalbany4 from '../assets/exp/jlalbany/JL_FOND ROSE CLAIR ROSE.svg';
-import jlalbany5 from '../assets/exp/jlalbany/JL_MINI FOND ROSE CLAIR NOIR.svg';
-import jlalbany6 from '../assets/exp/jlalbany/JL_MINI FOND ROSE CLAIR ROSE.svg';
+import jlalbany1 from '../assets/exp/jlalbany/jlu2024mob.png';
+import jlalbany2 from '../assets/exp/jlalbany/jlu2024desk.png';
+import jlalbany3 from '../assets/exp/jlalbany/SQUARE_JLA 1 SQUARE T copy.png';
+import jlalbany4 from '../assets/exp/jlalbany/SQUARE_JLA 2 Y GREY copy.png';
+import jlalbany5 from '../assets/exp/jlalbany/SQUARE_JLA 5Y copy.png';
+import jlalbany6 from '../assets/exp/jlalbany/SQUARE_JLA white thin copy 4.png';
 import sashayogaflow1 from '../assets/exp/sashayogaflow/sashayogaflow1.png';
 import sashayogaflow2 from '../assets/exp/sashayogaflow/sashayogaflow2.png';
 import sashayogaflow3 from '../assets/exp/sashayogaflow/sasha yoga logo_400 BLACK WHITE.svg';
